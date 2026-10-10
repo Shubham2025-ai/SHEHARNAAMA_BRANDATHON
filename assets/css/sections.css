@@ -6,7 +6,7 @@
 
 .hero {
   position: relative;
-  padding-block: calc(var(--space-5) + 10px) 0;
+  padding-block: clamp(1.25rem, 2.5vw, 2rem) 0;
   background:
     radial-gradient(1100px 500px at 85% -10%, rgba(242, 230, 213, 0.9), transparent 65%),
     var(--warm-white);
