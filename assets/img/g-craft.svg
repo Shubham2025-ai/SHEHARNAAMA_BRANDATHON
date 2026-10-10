@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="A potter's wheel shaping a clay pot among finished vessels">
+  <defs>
+    <linearGradient id="g3bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E3C8"/>
+      <stop offset="1" stop-color="#ECDBBD"/>
+    </linearGradient>
+    <filter id="g3grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#g3bg)"/>
+  <!-- wall shelf -->
+  <rect x="70" y="90" width="460" height="20" fill="#8A5A32" stroke="#5E3E2F" stroke-width="3"/>
+  <g stroke="#8A5A32" stroke-width="3">
+    <path d="M110 90 q-18 -50 0 -74 q18 24 0 74" fill="#AD6046"/>
+    <path d="M200 90 v-40 q0 -14 16 -14 q16 0 16 14 v40" fill="#C89B62"/>
+    <ellipse cx="300" cy="62" rx="30" ry="26" fill="#667B82"/>
+    <path d="M300 36 v-12" stroke="#5E3E2F" stroke-width="6"/>
+    <path d="M380 90 q-20 -34 0 -60 q20 26 0 60" fill="#AD6046"/>
+  </g>
+  <!-- potter's wheel -->
+  <ellipse cx="300" cy="560" rx="150" ry="44" fill="#33312F"/>
+  <ellipse cx="300" cy="548" rx="150" ry="44" fill="#57676E"/>
+  <ellipse cx="300" cy="548" rx="96" ry="28" fill="#E3CFA8"/>
+  <!-- pot being thrown -->
+  <path d="M300 548 c-64 -8 -74 -60 -44 -96 c-14 -30 10 -62 44 -62 c34 0 58 32 44 62 c30 36 20 88 -44 96 Z" fill="#AD6046"/>
+  <path d="M262 420 q38 16 76 0 M252 456 q48 20 96 0" stroke="#8C4B36" stroke-width="4" fill="none"/>
+  <ellipse cx="300" cy="388" rx="30" ry="10" fill="#C07A5B"/>
+  <!-- motion arcs -->
+  <path d="M120 548 a180 52 0 0 1 90 -46 M480 548 a180 52 0 0 0 -90 -46" fill="none" stroke="#77716A" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/>
+  <!-- finished pots beside -->
+  <g stroke="#8A5A32" stroke-width="3">
+    <ellipse cx="110" cy="640" rx="34" ry="42" fill="#AD6046"/>
+    <path d="M110 598 v-14" stroke="#5E3E2F" stroke-width="7"/>
+    <ellipse cx="480" cy="652" rx="28" ry="34" fill="#C89B62"/>
+    <ellipse cx="530" cy="664" rx="20" ry="24" fill="#667B82"/>
+  </g>
+  <!-- ground -->
+  <path d="M0 700 H600" stroke="#C39B6D" stroke-width="8"/>
+  <g stroke="#DFCBA8" stroke-width="3">
+    <path d="M70 726 h110 M330 730 h130 M480 712 h80"/>
+  </g>
+  <rect width="600" height="750" filter="url(#g3grain)"/>
+</svg>

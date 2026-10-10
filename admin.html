@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Sheharnaama — Admin</title>
+  <meta name="theme-color" content="#33312F">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo_icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin-body">
+
+  <header class="admin-header">
+    <div class="container admin-header-inner">
+      <a class="brand" href="/" aria-label="Back to the Sheharnaama website">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="58 25 204 245" width="30" height="36" focusable="false">
+            <path d="M58 238 V127 Q58 102 78 83 L160 25 L242 83 Q262 102 262 127 V238 H224 V130 Q224 117 213 108 L160 70 L107 108 Q96 117 96 130 V238Z" fill="#D89A80"/>
+            <path d="M116 211 V139 Q116 128 127 120 L160 96 L193 120 Q204 128 204 139 V211" fill="#3B3836"/>
+            <path d="M130 199 C143 182 154 177 168 162 C180 149 177 137 166 136 C155 135 149 149 156 159" fill="none" stroke="#F2E6D5" stroke-width="9" stroke-linecap="round"/>
+            <path d="M83 252 Q121 232 160 249 Q199 232 237 252 L237 270 Q200 250 160 267 Q120 250 83 270Z" fill="#F2E6D5"/>
+            <circle cx="162" cy="121" r="5" fill="#F2E6D5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Sheharnaama</span>
+          <span class="brand-tagline">Admin console</span>
+        </span>
+      </a>
+      <button type="button" class="btn btn-ghost btn-small" id="admin-logout" hidden>Log out</button>
+    </div>
+  </header>
+
+  <main class="admin-main container">
+
+    <!-- ============ Login view ============ -->
+    <section class="admin-login" id="login-view" aria-labelledby="login-title">
+      <div class="admin-login-card">
+        <p class="eyebrow">Team access only</p>
+        <h1 id="login-title">Admin sign in</h1>
+        <p class="admin-login-note">Registrations and visitor details are protected on the server. Sign in with the administrator credentials configured for this deployment.</p>
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="admin-username">Username</label>
+            <input type="text" id="admin-username" name="username" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" name="password" autocomplete="current-password" required>
+          </div>
+          <div id="login-status" class="form-status" role="alert" aria-live="assertive"></div>
+          <button type="submit" class="btn btn-primary btn-block" id="login-submit">Sign in</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ Dashboard view ============ -->
+    <section class="admin-dashboard" id="dashboard-view" hidden aria-labelledby="dash-title">
+      <div class="admin-dash-head">
+        <h1 id="dash-title">Registrations</h1>
+        <p class="admin-dash-sub">Expressions of interest received through the landing-page form. An expression of interest is <strong>not a confirmed tour booking</strong>.</p>
+      </div>
+
+      <div id="email-notice" class="admin-notice" hidden>
+        <strong>Automated emails are not configured.</strong>
+        Enquiries are stored normally — follow up with visitors manually. See <code>.env</code> documentation in <code>README_FULLSTACK.md</code>.
+      </div>
+
+      <div class="admin-tabs" role="tablist" aria-label="Admin sections">
+        <button type="button" class="admin-tab" id="tab-enquiries" role="tab" aria-selected="true" aria-controls="enquiries-panel">Enquiries</button>
+        <button type="button" class="admin-tab" id="tab-sessions" role="tab" aria-selected="false" aria-controls="sessions-panel">Walk Sessions</button>
+      </div>
+
+      <div id="enquiries-panel" role="tabpanel" aria-labelledby="tab-enquiries">
+
+      <ul class="admin-stats" id="admin-stats" aria-label="Registration counts">
+        <li class="stat-tile stat-total"><span class="stat-value" data-stat="total">0</span><span class="stat-label">Total registrations</span></li>
+        <li class="stat-tile"><span class="stat-value" data-stat="INTEREST_RECEIVED">0</span><span class="stat-label">New enquiries</span></li>
+        <li class="stat-tile"><span class="stat-value" data-stat="CONTACTED">0</span><span class="stat-label">Contacted</span></li>
+        <li class="stat-tile"><span class="stat-value" data-stat="WAITLISTED">0</span><span class="stat-label">Waitlisted</span></li>
+        <li class="stat-tile"><span class="stat-value" data-stat="CLOSED">0</span><span class="stat-label">Closed</span></li>
+      </ul>
+
+      <div class="admin-toolbar">
+        <div class="field admin-search">
+          <label for="admin-search" class="visually-hidden">Search registrations</label>
+          <input type="search" id="admin-search" placeholder="Search name, email or reference&hellip;">
+        </div>
+        <div class="field admin-filter">
+          <label for="admin-status-filter" class="visually-hidden">Filter by status</label>
+          <select id="admin-status-filter">
+            <option value="" selected>All statuses</option>
+            <option value="INTEREST_RECEIVED">New enquiries</option>
+            <option value="CONTACTED">Contacted</option>
+            <option value="WAITLISTED">Waitlisted</option>
+            <option value="CLOSED">Closed</option>
+          </select>
+        </div>
+        <a class="btn btn-ghost btn-small" id="admin-export" href="/api/admin/registrations/export.csv">Export CSV</a>
+      </div>
+
+      <div id="admin-feedback" class="form-status" role="status" aria-live="polite"></div>
+
+      <div class="admin-table-wrap" id="table-wrap">
+        <table class="admin-table" id="admin-table">
+          <thead>
+            <tr>
+              <th scope="col">Reference</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Experience</th>
+              <th scope="col">Preferred date</th>
+              <th scope="col">Guests</th>
+              <th scope="col">Submitted</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body"></tbody>
+        </table>
+        <div class="admin-empty" id="admin-empty" hidden>
+          <p><strong>No registrations to show.</strong></p>
+          <p>Submit the interest form on the landing page, or adjust the search and status filters.</p>
+        </div>
+        <div class="admin-loading" id="admin-loading" hidden>Loading registrations&hellip;</div>
+      </div>
+
+      <div class="admin-pagination">
+        <button type="button" class="btn btn-ghost btn-small" id="page-prev" disabled>&larr; Previous</button>
+        <span id="page-indicator" aria-live="polite">Page 1 of 1</span>
+        <button type="button" class="btn btn-ghost btn-small" id="page-next" disabled>Next &rarr;</button>
+      </div>
+      </div>
+
+      <!-- ============ Walk Sessions panel ============ -->
+      <div id="sessions-panel" role="tabpanel" aria-labelledby="tab-sessions" hidden>
+        <div class="admin-sessions-head">
+          <p class="admin-dash-sub">Manage upcoming walk sessions. Only <strong>published, upcoming</strong> sessions appear on the public schedule — publish only after details are verified.</p>
+          <button type="button" class="btn btn-primary btn-small" id="session-new">New walk session</button>
+        </div>
+
+        <ul class="admin-stats admin-stats-sessions" id="session-stats" aria-label="Session counts">
+          <li class="stat-tile stat-total"><span class="stat-value" data-sstat="total">0</span><span class="stat-label">Total sessions</span></li>
+          <li class="stat-tile"><span class="stat-value" data-sstat="DRAFT">0</span><span class="stat-label">Draft</span></li>
+          <li class="stat-tile"><span class="stat-value" data-sstat="PUBLISHED">0</span><span class="stat-label">Published</span></li>
+          <li class="stat-tile"><span class="stat-value" data-sstat="CANCELLED">0</span><span class="stat-label">Cancelled</span></li>
+          <li class="stat-tile"><span class="stat-value" data-sstat="COMPLETED">0</span><span class="stat-label">Completed</span></li>
+        </ul>
+
+        <div id="sessions-feedback" class="form-status" role="status" aria-live="polite"></div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table admin-table-sessions">
+            <thead>
+              <tr>
+                <th scope="col">Session</th>
+                <th scope="col">Date</th>
+                <th scope="col">Start</th>
+                <th scope="col">Capacity</th>
+                <th scope="col">Enquiries</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="sessions-table-body"></tbody>
+          </table>
+          <div class="admin-empty" id="sessions-empty" hidden>
+            <p><strong>No walk sessions yet.</strong></p>
+            <p>Create a session and publish it once the route, date and meeting point are verified.</p>
+          </div>
+          <div class="admin-loading" id="sessions-loading" hidden>Loading sessions&hellip;</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Detail dialog ============ -->
+  <dialog class="admin-detail" id="detail-dialog" aria-labelledby="detail-title">
+    <div class="admin-detail-head">
+      <h2 id="detail-title">Registration</h2>
+      <button type="button" class="lightbox-close" id="detail-close" aria-label="Close details">&times;</button>
+    </div>
+    <div id="detail-body" class="admin-detail-body"></div>
+    <div class="admin-detail-actions">
+      <label for="detail-status">Update status</label>
+      <select id="detail-status">
+        <option value="INTEREST_RECEIVED">Interest received</option>
+        <option value="CONTACTED">Contacted</option>
+        <option value="WAITLISTED">Waitlisted</option>
+        <option value="CLOSED">Closed</option>
+      </select>
+      <button type="button" class="btn btn-primary btn-small" id="detail-save">Save status</button>
+    </div>
+    <div id="detail-feedback" class="form-status" role="status" aria-live="polite"></div>
+  </dialog>
+
+  <!-- ============ Session form dialog (create / edit) ============ -->
+  <dialog class="admin-detail" id="session-form-dialog" aria-labelledby="session-form-title">
+    <div class="admin-detail-head">
+      <h2 id="session-form-title">New walk session</h2>
+      <button type="button" class="lightbox-close" id="session-form-close" aria-label="Close session form">&times;</button>
+    </div>
+    <form id="session-form" novalidate>
+      <div class="field">
+        <label for="sf-title">Session title <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="sf-title" maxlength="120" required>
+      </div>
+      <div class="field">
+        <label for="sf-description">Description <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="sf-description" rows="3" maxlength="1000" required></textarea>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="sf-date">Walk date <span class="req" aria-hidden="true">*</span></label>
+          <input type="date" id="sf-date" required>
+        </div>
+        <div class="field">
+          <label for="sf-time">Start time (24h) <span class="req" aria-hidden="true">*</span></label>
+          <input type="time" id="sf-time" required>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="sf-duration">Duration (minutes) <span class="req" aria-hidden="true">*</span></label>
+          <input type="number" id="sf-duration" min="15" max="480" step="15" value="120" required>
+        </div>
+        <div class="field">
+          <label for="sf-capacity">Group capacity <span class="opt">(optional)</span></label>
+          <input type="number" id="sf-capacity" min="1" max="60" placeholder="e.g. 12">
+        </div>
+      </div>
+      <div class="field">
+        <label for="sf-meeting">Meeting point <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="sf-meeting" maxlength="200" required>
+      </div>
+      <div class="field">
+        <label for="sf-inclusions">Inclusions / important notes <span class="opt">(optional)</span></label>
+        <textarea id="sf-inclusions" rows="2" maxlength="600"></textarea>
+      </div>
+      <div id="session-form-feedback" class="form-status" role="alert" aria-live="assertive"></div>
+      <button type="submit" class="btn btn-primary btn-block" id="session-form-save">Create session</button>
+      <p class="form-footnote">New sessions start as drafts and are invisible to visitors until published.</p>
+    </form>
+  </dialog>
+
+  <!-- ============ Session enquiries dialog ============ -->
+  <dialog class="admin-detail" id="session-detail-dialog" aria-labelledby="session-detail-title">
+    <div class="admin-detail-head">
+      <h2 id="session-detail-title">Session details</h2>
+      <button type="button" class="lightbox-close" id="session-detail-close" aria-label="Close session details">&times;</button>
+    </div>
+    <div id="session-detail-body" class="admin-detail-body"></div>
+    <div id="session-detail-feedback" class="form-status" role="status" aria-live="polite"></div>
+  </dialog>
+
+  <footer class="admin-footer">
+    <div class="container">
+      <p>Sheharnaama admin console &mdash; expressions of interest only, never confirmed bookings.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sample QR placeholder — decorative, not scannable">
+  <rect width="200" height="200" rx="14" fill="#F9F6F0" stroke="#33312F" stroke-width="3"/>
+  <!-- corner finders -->
+  <g fill="#33312F">
+    <rect x="18" y="18" width="44" height="44" rx="8"/>
+    <rect x="138" y="18" width="44" height="44" rx="8"/>
+    <rect x="18" y="138" width="44" height="44" rx="8"/>
+  </g>
+  <g fill="#F9F6F0">
+    <rect x="28" y="28" width="24" height="24" rx="4"/>
+    <rect x="148" y="28" width="24" height="24" rx="4"/>
+    <rect x="28" y="148" width="24" height="24" rx="4"/>
+  </g>
+  <g fill="#33312F">
+    <rect x="36" y="36" width="8" height="8"/>
+    <rect x="156" y="36" width="8" height="8"/>
+    <rect x="36" y="156" width="8" height="8"/>
+  </g>
+  <!-- decorative modules (non-scannable) -->
+  <g fill="#33312F">
+    <rect x="76" y="18" width="10" height="10"/><rect x="96" y="18" width="10" height="10"/>
+    <rect x="76" y="38" width="10" height="10"/><rect x="116" y="38" width="10" height="10"/>
+    <rect x="18" y="76" width="10" height="10"/><rect x="38" y="96" width="10" height="10"/>
+    <rect x="76" y="76" width="14" height="14"/><rect x="110" y="76" width="10" height="10"/>
+    <rect x="138" y="76" width="10" height="10"/><rect x="158" y="76" width="10" height="10"/>
+    <rect x="96" y="96" width="10" height="10"/><rect x="152" y="96" width="10" height="10"/>
+    <rect x="76" y="116" width="10" height="10"/><rect x="116" y="116" width="14" height="14"/>
+    <rect x="76" y="138" width="10" height="10"/><rect x="96" y="158" width="10" height="10"/>
+    <rect x="138" y="138" width="10" height="10"/><rect x="158" y="158" width="10" height="10"/>
+    <rect x="116" y="176" width="10" height="10"/><rect x="76" y="176" width="10" height="10"/>
+  </g>
+  <!-- centre arch mark -->
+  <path d="M92 118 v-14 a10 10 0 0 1 20 0 v14" fill="none" stroke="#AD6046" stroke-width="4" stroke-linecap="round"/>
+  <path d="M89 118 h26" stroke="#AD6046" stroke-width="4" stroke-linecap="round"/>
+</svg>

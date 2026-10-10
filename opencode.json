@@ -1,0 +1,20 @@
+
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "featherless": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Featherless AI",
+      "options": {
+        "baseURL": "https://api.featherless.ai/v1",
+        "apiKey": "{env:FEATHERLESS_API_KEY}"
+      },
+      "models": {
+        "zai-org/GLM-5.3-Flash": {
+          "name": "GLM-5.3-Flash",
+          "toolCall": true
+        }
+      }
+    }
+  }
+}

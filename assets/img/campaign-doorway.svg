@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-label="A weathered wooden doorway with light spilling across the threshold">
+  <defs>
+    <radialGradient id="dglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F9DFAF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F9DFAF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E3C8"/>
+      <stop offset="1" stop-color="#ECDBBD"/>
+    </linearGradient>
+    <filter id="dgrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="640" height="800" fill="url(#dbg)"/>
+
+  <!-- wall -->
+  <rect x="70" y="60" width="500" height="620" fill="#B06A4E" stroke="#8C4B36" stroke-width="3"/>
+  <g stroke="#8C4B36" stroke-width="2" opacity="0.3">
+    <path d="M70 120 H570 M70 200 H570 M70 620 H570"/>
+    <path d="M120 60 V120 M220 60 V120 M320 60 V120 M420 60 V120 M520 60 V120"/>
+  </g>
+
+  <!-- glow behind door -->
+  <ellipse cx="320" cy="470" rx="220" ry="200" fill="url(#dglow)"/>
+
+  <!-- doorway -->
+  <path d="M212 680 V380 A108 108 0 0 1 428 380 V680 Z" fill="#F6E3B8"/>
+  <path d="M212 680 V380 A108 108 0 0 1 428 380 V680" fill="none" stroke="#8C4B36" stroke-width="8"/>
+  <!-- door leaves ajar -->
+  <path d="M226 680 V386 A94 94 0 0 1 314 300 L314 680 Z" fill="#5E3E2F" stroke="#4A2F23" stroke-width="4"/>
+  <path d="M326 680 V300 A94 94 0 0 1 414 386 V680 Z" fill="#6E4A38" stroke="#4A2F23" stroke-width="4"/>
+  <path d="M262 400 V640 M366 400 V640" stroke="#4A2F23" stroke-width="3" opacity="0.7"/>
+  <circle cx="306" cy="500" r="6" fill="#C89B62"/>
+  <circle cx="334" cy="500" r="6" fill="#C89B62"/>
+  <!-- threshold -->
+  <path d="M180 680 H460 M164 700 H476" stroke="#8C4B36" stroke-width="9" stroke-linecap="round"/>
+  <!-- light spill -->
+  <polygon points="240,680 400,680 470,724 176,724" fill="#F6D8A8" opacity="0.85"/>
+
+  <!-- dotted path to the door -->
+  <path d="M320 782 C260 756 380 742 320 724" fill="none" stroke="#33312F" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 13"/>
+
+  <!-- plant + hanging lamp -->
+  <g>
+    <path d="M108 640 h76 l-12 -56 h-52 Z" fill="#AD6046" stroke="#8C4B36" stroke-width="3"/>
+    <g stroke="#5E6E4E" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M146 596 q-30 -34 -52 -28 M146 596 q30 -34 52 -28 M146 596 q-12 -44 4 -64 M146 596 q12 -44 -4 -64"/>
+    </g>
+  </g>
+  <path d="M520 60 V118" stroke="#33312F" stroke-width="3"/>
+  <path d="M504 118 h32 l10 30 q-26 14 -52 0 Z" fill="#33312F"/>
+  <circle cx="520" cy="160" r="9" fill="#F6D8A8"/>
+
+  <!-- annotation -->
+  <ellipse cx="320" cy="450" rx="150" ry="180" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <path d="M470 450 q40 0 40 -34 v-56" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <circle cx="510" cy="356" r="6" fill="#AD6046"/>
+
+  <rect width="640" height="800" filter="url(#dgrain)"/>
+</svg>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>harness</title></head>
+<body>
+<iframe id="site" src="/index.html" style="width:1280px;height:900px"></iframe>
+<pre id="results">pending</pre>
+<script>
+(function () {
+  var out = [];
+  function ok(name, cond) { out.push((cond ? "PASS" : "FAIL") + " " + name); }
+
+  var frame = document.getElementById("site");
+  frame.addEventListener("load", function () {
+    var doc = frame.contentDocument;
+    var win = frame.contentWindow;
+
+    try {
+      /* 1. mobile menu toggle */
+      var toggle = doc.getElementById("nav-toggle");
+      var nav = doc.getElementById("main-nav");
+      toggle.click();
+      ok("menu opens", nav.classList.contains("open") && toggle.getAttribute("aria-expanded") === "true");
+      nav.querySelector("a[href='#faq']").click();
+      ok("menu closes on link click", !nav.classList.contains("open") && toggle.getAttribute("aria-expanded") === "false");
+
+      /* 2. passport flip */
+      var flip = doc.getElementById("passport-flip");
+      var book = doc.getElementById("passport-book");
+      flip.click();
+      ok("passport flips", book.classList.contains("flipped") && flip.getAttribute("aria-pressed") === "true" && flip.textContent === "View cover");
+      flip.click();
+      ok("passport flips back", !book.classList.contains("flipped") && flip.textContent === "Look inside");
+
+      /* 3. gallery lightbox */
+      var trigger = doc.querySelector(".gallery-trigger");
+      var lb = doc.getElementById("lightbox");
+      trigger.click();
+      ok("lightbox opens", lb.open && doc.getElementById("lightbox-img").src.indexOf("g-doorway") !== -1);
+      doc.getElementById("lightbox-close").click();
+      ok("lightbox closes", !lb.open);
+
+      /* 4. empty submit -> inline errors */
+      var form = doc.getElementById("interest-form");
+      form.dispatchEvent(new win.Event("submit", { cancelable: true }));
+      ok("name error shown", doc.getElementById("err-name").textContent.length > 0);
+      ok("email error shown", doc.getElementById("err-email").textContent.length > 0);
+      ok("guests error shown", doc.getElementById("err-guests").textContent.length > 0);
+      ok("interest error shown", doc.getElementById("err-interest").textContent.length > 0);
+      ok("consent error shown", doc.getElementById("err-consent").textContent.length > 0);
+      ok("focused first invalid", doc.activeElement && doc.activeElement.id === "f-name");
+      ok("no success shown on invalid", doc.getElementById("form-status").innerHTML.indexOf("status-success") === -1);
+
+      /* 5. invalid email preserved state */
+      doc.getElementById("f-name").value = "Test Person";
+      doc.getElementById("f-email").value = "not-an-email";
+      doc.getElementById("f-guests").value = "3";
+      doc.getElementById("f-interest").value = "peth-stories-walk";
+      doc.getElementById("f-consent").checked = true;
+      form.dispatchEvent(new win.Event("submit", { cancelable: true }));
+      ok("email format error", doc.getElementById("err-email").textContent.toLowerCase().indexOf("valid") !== -1);
+      ok("name field preserved after fail", doc.getElementById("f-name").value === "Test Person");
+
+      /* 6. valid submission → server-generated reference */
+      doc.getElementById("f-email").value = "test@example.com";
+      form.dispatchEvent(new win.Event("submit", { cancelable: true }));
+
+      setTimeout(function () {
+        var statusHtml = doc.getElementById("form-status").innerHTML;
+        ok("success shows server reference", /SH-\d{4}-[0-9A-F]{6}/.test(statusHtml));
+        ok("honest wording: not a confirmed booking", statusHtml.indexOf("not a confirmed tour booking") !== -1);
+        ok("form cleared after success", doc.getElementById("f-name").value === "");
+
+        /* 7. submit button restored */
+        ok("submit restored", doc.getElementById("form-submit").disabled === false);
+
+        /* 8. FAQ accordion */
+        var faq = doc.querySelector(".faq-item");
+        faq.open = true;
+        ok("faq opens", faq.open);
+
+        /* 9. anchor targets exist for all nav links */
+        var targets = ["experience", "story", "passport", "faq", "register", "route", "gallery", "why", "campaign"];
+        ok("all anchors exist", targets.every(function (t) { return doc.getElementById(t) !== null; }));
+
+        document.getElementById("results").textContent = out.join("\n");
+        document.title = "done";
+      }, 1200);
+    } catch (e) {
+      out.push("ERROR " + e.message);
+      document.getElementById("results").textContent = out.join("\n");
+    }
+  });
+})();
+</script>
+</body>
+</html>

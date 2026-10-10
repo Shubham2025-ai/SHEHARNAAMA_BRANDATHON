@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="A craft workshop corner with brass and clay pots on shelves, a weaving frame and hanging threads">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6EAD6"/>
+      <stop offset="1" stop-color="#EFE0C6"/>
+    </linearGradient>
+    <filter id="grain2"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="640" height="520" fill="url(#bg2)"/>
+
+  <!-- workshop wall -->
+  <rect x="70" y="70" width="500" height="380" fill="#B06A4E"/>
+  <rect x="70" y="70" width="500" height="380" fill="none" stroke="#8C4B36" stroke-width="3"/>
+
+  <!-- shelves with pots -->
+  <path d="M110 232 H330 M110 330 H330" stroke="#5E3E2F" stroke-width="9" stroke-linecap="round"/>
+  <g stroke="#8A5A32" stroke-width="3">
+    <path d="M132 232 v-40 q0 -16 16 -16 q16 0 16 16 v40" fill="#C89B62"/>
+    <path d="M188 232 v-52 h34 v52" fill="#F2E6D5"/>
+    <path d="M250 232 q-24 -30 0 -54 q24 24 0 54" fill="#AD6046"/>
+  </g>
+  <g stroke="#8A5A32" stroke-width="3">
+    <ellipse cx="150" cy="306" rx="26" ry="24" fill="#AD6046"/>
+    <path d="M150 282 v-10" stroke="#5E3E2F" stroke-width="6"/>
+    <path d="M210 330 v-44 q0 -14 14 -14 q14 0 14 14 v44" fill="#C89B62"/>
+    <path d="M282 330 q-20 -26 0 -48 q20 22 0 48" fill="#667B82"/>
+  </g>
+
+  <!-- weaving frame -->
+  <rect x="390" y="120" width="150" height="200" fill="none" stroke="#5E3E2F" stroke-width="9"/>
+  <g stroke="#E3D3BD" stroke-width="2.5">
+    <path d="M408 120 V320 M426 120 V320 M444 120 V320 M462 120 V320 M480 120 V320 M498 120 V320 M516 120 V320"/>
+  </g>
+  <path d="M390 168 H540 M390 216 H540 M390 264 H540" stroke="#AD6046" stroke-width="6"/>
+  <path d="M390 216 h150" stroke="#8C4B36" stroke-width="2" opacity="0.6"/>
+  <rect x="452" y="188" width="26" height="56" rx="10" fill="#33312F"/>
+
+  <!-- hanging threads -->
+  <g stroke-width="2.5" stroke-linecap="round">
+    <path d="M120 96 V150" stroke="#33312F"/>
+    <path d="M150 96 V168" stroke="#33312F"/>
+    <path d="M180 96 V140" stroke="#33312F"/>
+  </g>
+  <g>
+    <circle cx="120" cy="160" r="12" fill="#AD6046"/>
+    <circle cx="150" cy="178" r="12" fill="#667B82"/>
+    <circle cx="180" cy="150" r="12" fill="#C89B62"/>
+    <circle cx="120" cy="160" r="5" fill="#F2E6D5"/>
+    <circle cx="150" cy="178" r="5" fill="#F2E6D5"/>
+    <circle cx="180" cy="150" r="5" fill="#F2E6D5"/>
+  </g>
+
+  <!-- stool and cloth -->
+  <path d="M120 428 h96 l-10 -44 h-76 Z" fill="#8A5A32" stroke="#5E3E2F" stroke-width="3"/>
+  <path d="M96 384 h144 l-24 -34 h-96 Z" fill="#E8D3B4" stroke="#B99C74" stroke-width="3"/>
+  <g stroke="#AD6046" stroke-width="3">
+    <path d="M116 356 l-14 24 M146 352 l-14 28 M176 352 l-14 28 M206 356 l-14 24"/>
+  </g>
+
+  <!-- annotation -->
+  <ellipse cx="465" cy="220" rx="104" ry="128" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <path d="M569 220 q36 0 36 -28 v-42" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <circle cx="605" cy="146" r="5" fill="#AD6046"/>
+
+  <rect width="640" height="520" filter="url(#grain2)"/>
+</svg>

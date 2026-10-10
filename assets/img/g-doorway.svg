@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="A weathered wooden door painted in faded indigo set in a terracotta frame">
+  <defs>
+    <linearGradient id="g1bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E3C8"/>
+      <stop offset="1" stop-color="#ECDBBD"/>
+    </linearGradient>
+    <filter id="g1grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#g1bg)"/>
+  <rect x="60" y="50" width="480" height="640" fill="#BE7556" stroke="#8C4B36" stroke-width="3"/>
+  <g stroke="#8C4B36" stroke-width="2" opacity="0.3">
+    <path d="M60 110 H540 M60 620 H540"/>
+  </g>
+  <path d="M140 690 V300 A160 160 0 0 1 460 300 V690 Z" fill="#4F6169"/>
+  <path d="M158 690 V306 A142 142 0 0 1 442 306 V690 Z" fill="#667B82"/>
+  <path d="M200 690 V318 A100 100 0 0 1 400 318 V690 Z" fill="#57676E"/>
+  <g stroke="#47565C" stroke-width="5">
+    <path d="M262 330 V690 M338 330 V690 M225 470 H375"/>
+  </g>
+  <g stroke="#7E9096" stroke-width="2.5" opacity="0.6">
+    <path d="M180 260 q60 -30 120 0 M240 220 q40 -18 80 0"/>
+  </g>
+  <circle cx="386" cy="500" r="9" fill="#C89B62"/>
+  <circle cx="386" cy="500" r="4" fill="#8A5A32"/>
+  <path d="M118 690 H482 M104 712 H496" stroke="#8C4B36" stroke-width="9" stroke-linecap="round"/>
+  <path d="M300 690 V646" stroke="#33312F" stroke-width="4" stroke-dasharray="0.1 11" stroke-linecap="round"/>
+  <path d="M508 50 h44 v44" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 9"/>
+  <rect width="600" height="750" filter="url(#g1grain)"/>
+</svg>

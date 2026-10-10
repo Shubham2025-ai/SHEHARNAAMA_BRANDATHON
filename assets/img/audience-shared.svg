@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Three friends walking together along a dotted route past old arches">
+  <defs>
+    <linearGradient id="a3bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6EAD6"/>
+      <stop offset="1" stop-color="#EFE0C6"/>
+    </linearGradient>
+    <filter id="a3grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="640" height="480" fill="url(#a3bg)"/>
+
+  <!-- arches receding -->
+  <g fill="none" stroke="#C7AD83" stroke-width="5">
+    <path d="M40 420 V220 A60 60 0 0 1 160 220 V420 M20 420 H180"/>
+    <path d="M470 420 V230 A55 55 0 0 1 580 230 V420 M452 420 H598"/>
+  </g>
+  <path d="M100 420 V260 A40 40 0 0 1 180 260" stroke="#DFCBA8" stroke-width="4" fill="none" opacity="0.7"/>
+  <path d="M520 420 V280 A34 34 0 0 1 588 280" stroke="#DFCBA8" stroke-width="4" fill="none" opacity="0.7"/>
+
+  <!-- ground -->
+  <path d="M0 420 H640" stroke="#C39B6D" stroke-width="8"/>
+  <g stroke="#DFCBA8" stroke-width="3">
+    <path d="M60 452 h90 M240 460 h110 M440 448 h100 M160 440 h70"/>
+  </g>
+
+  <!-- dotted route -->
+  <path d="M40 460 C160 430 120 380 260 380 C400 380 380 430 600 410" fill="none" stroke="#AD6046" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 12"/>
+  <circle cx="600" cy="410" r="6" fill="#667B82"/>
+
+  <!-- three walkers -->
+  <g fill="#33312F">
+    <circle cx="240" cy="264" r="13"/>
+    <path d="M226 280 q14 -9 28 0 l8 52 h-11 l-4 34 h-9 l-3 -34 h-11 Z"/>
+    <path d="M254 296 l20 -14 l6 8 l-20 16 Z"/>
+  </g>
+  <g fill="#AD6046">
+    <circle cx="310" cy="276" r="12"/>
+    <path d="M297 291 q13 -8 26 0 l8 48 h-11 l-3 32 h-8 l-2 -32 h-10 Z"/>
+  </g>
+  <g fill="#667B82">
+    <circle cx="384" cy="262" r="13"/>
+    <path d="M370 278 q14 -9 28 0 l8 52 h-11 l-4 34 h-9 l-3 -34 h-10 Z"/>
+  </g>
+
+  <!-- floating stamps -->
+  <g>
+    <circle cx="520" cy="120" r="34" fill="none" stroke="#AD6046" stroke-width="3" stroke-dasharray="4 7"/>
+    <path d="M520 106 v-9 a10 10 0 0 1 20 0 v9 M512 106 h36 M510 106 v10 h40 v-10" stroke="#AD6046" stroke-width="3" fill="none"/>
+    <circle cx="120" cy="90" r="26" fill="none" stroke="#667B82" stroke-width="3" stroke-dasharray="4 7"/>
+    <path d="M120 80 v-7 a8 8 0 0 1 16 0 v7 M112 80 h28" stroke="#667B82" stroke-width="2.5" fill="none"/>
+  </g>
+
+  <rect width="640" height="480" filter="url(#a3grain)"/>
+</svg>

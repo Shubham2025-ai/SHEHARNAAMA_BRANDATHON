@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-label="A narrow lane with hanging lanterns, shopfronts and a bicycle leaning on a wall">
+  <defs>
+    <radialGradient id="lglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F9DFAF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#F9DFAF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E3C8"/>
+      <stop offset="1" stop-color="#ECDBBD"/>
+    </linearGradient>
+    <filter id="lgrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="640" height="800" fill="url(#lbg)"/>
+
+  <!-- lane walls converging -->
+  <polygon points="60,800 200,300 300,300 300,800" fill="#B06A4E" stroke="#8C4B36" stroke-width="3"/>
+  <polygon points="580,800 460,260 360,260 360,800" fill="#A25B41" stroke="#8C4B36" stroke-width="3"/>
+  <!-- end of lane glow -->
+  <polygon points="300,800 300,300 360,300 360,800" fill="#F6E3B8"/>
+  <ellipse cx="330" cy="480" rx="90" ry="150" fill="url(#lglow)"/>
+  <path d="M312 620 V520 A24 24 0 0 1 360 520 V620" fill="#FBEBc6" stroke="#C79E6C" stroke-width="3"/>
+
+  <!-- windows on left wall -->
+  <path d="M96 470 h64 v54 h-64 Z" fill="#F2E6D5" stroke="#8C4B36" stroke-width="3"/>
+  <path d="M112 470 v54 M144 470 v54" stroke="#667B82" stroke-width="4"/>
+  <!-- shop board right -->
+  <rect x="400" y="420" width="150" height="64" fill="#F2E6D5" stroke="#8C4B36" stroke-width="3"/>
+  <path d="M418 452 h114 M418 438 h80 M418 466 h96" stroke="#AD6046" stroke-width="5" stroke-linecap="round"/>
+  <path d="M392 420 h166 l-10 14 h-146 Z" fill="#667B82"/>
+  <!-- awning stripes -->
+  <g>
+    <path d="M376 388 h190 l-14 22 h-162 Z" fill="#AD6046"/>
+    <rect x="404" y="388" width="22" height="22" fill="#F2E6D5"/>
+    <rect x="452" y="388" width="22" height="22" fill="#F2E6D5"/>
+    <rect x="500" y="388" width="22" height="22" fill="#F2E6D5"/>
+  </g>
+
+  <!-- lanterns across the lane -->
+  <g stroke="#33312F" stroke-width="3">
+    <path d="M60 180 Q330 250 580 150" fill="none"/>
+  </g>
+  <g>
+    <path d="M200 232 v22 M330 262 v22 M480 198 v22" stroke="#33312F" stroke-width="3"/>
+    <path d="M186 254 h28 l8 30 q-22 12 -44 0 Z" fill="#AD6046" stroke="#8C4B36" stroke-width="3"/>
+    <circle cx="214" cy="300" r="7" fill="#F6D8A8"/>
+    <path d="M316 284 h28 l8 30 q-22 12 -44 0 Z" fill="#33312F"/>
+    <circle cx="330" cy="330" r="7" fill="#F6D8A8"/>
+    <path d="M466 220 h28 l8 30 q-22 12 -44 0 Z" fill="#AD6046" stroke="#8C4B36" stroke-width="3"/>
+    <circle cx="480" cy="266" r="7" fill="#F6D8A8"/>
+  </g>
+
+  <!-- bicycle -->
+  <g stroke="#33312F" stroke-width="6" fill="none" stroke-linecap="round">
+    <circle cx="150" cy="712" r="42"/>
+    <circle cx="268" cy="712" r="42"/>
+    <path d="M150 712 L196 636 L268 712 M196 636 L176 628 M184 628 h24 M150 712 L188 648 L244 648 L268 712"/>
+    <path d="M196 636 L204 606 h20 M212 606 l14 42"/>
+  </g>
+  <circle cx="150" cy="712" r="6" fill="#33312F"/>
+  <circle cx="268" cy="712" r="6" fill="#33312F"/>
+
+  <!-- cobbles + route -->
+  <g stroke="#C39B6D" stroke-width="3" opacity="0.6">
+    <path d="M96 760 h150 M300 780 h160 M90 700 h60"/>
+  </g>
+  <path d="M320 786 C280 720 380 680 330 620" fill="none" stroke="#33312F" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 13"/>
+  <circle cx="330" cy="612" r="7" fill="#667B82"/>
+
+  <!-- annotation -->
+  <ellipse cx="330" cy="500" rx="120" ry="200" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+  <rect width="640" height="800" filter="url(#lgrain)"/>
+</svg>

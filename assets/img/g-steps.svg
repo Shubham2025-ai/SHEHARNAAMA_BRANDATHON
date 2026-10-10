@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="A row of brass temple bells hanging along a shaded colonnade">
+  <defs>
+    <linearGradient id="g5bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E3C8"/>
+      <stop offset="1" stop-color="#ECDBBD"/>
+    </linearGradient>
+    <filter id="g5grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#g5bg)"/>
+  <!-- colonnade -->
+  <rect x="0" y="80" width="600" height="26" fill="#8C4B36"/>
+  <g fill="#B06A4E" stroke="#8C4B36" stroke-width="3">
+    <rect x="40" y="106" width="34" height="480"/>
+    <rect x="200" y="106" width="34" height="480"/>
+    <rect x="360" y="106" width="34" height="480"/>
+    <rect x="520" y="106" width="34" height="480"/>
+  </g>
+  <g stroke="#8C4B36" stroke-width="2.5" opacity="0.5">
+    <path d="M47 106 V586 M67 106 V586 M207 106 V586 M227 106 V586 M367 106 V586 M387 106 V586 M527 106 V586 M547 106 V586"/>
+  </g>
+  <!-- beam with bells -->
+  <path d="M0 190 H600" stroke="#5E3E2F" stroke-width="10"/>
+  <g stroke="#33312F" stroke-width="3">
+    <path d="M120 190 V226 M280 190 V252 M440 190 V238 M540 190 V220"/>
+  </g>
+  <g stroke="#9A7238" stroke-width="3">
+    <path d="M100 226 h40 l12 40 q-32 16 -64 0 Z" fill="#C89B62"/>
+    <circle cx="120" cy="278" r="8" fill="#9A7238"/>
+    <path d="M260 252 h40 l12 40 q-32 16 -64 0 Z" fill="#C89B62"/>
+    <circle cx="280" cy="304" r="8" fill="#9A7238"/>
+    <path d="M420 238 h40 l12 40 q-32 16 -64 0 Z" fill="#C89B62"/>
+    <circle cx="440" cy="290" r="8" fill="#9A7238"/>
+    <path d="M520 220 h40 l12 40 q-32 16 -64 0 Z" fill="#C89B62"/>
+    <circle cx="540" cy="272" r="8" fill="#9A7238"/>
+  </g>
+  <path d="M120 296 q6 10 0 16 M280 322 q6 10 0 16 M440 308 q6 10 0 16 M540 290 q6 10 0 16" fill="none" stroke="#77716A" stroke-width="3" stroke-linecap="round"/>
+  <!-- floor + route -->
+  <path d="M0 640 H600" stroke="#C39B6D" stroke-width="8"/>
+  <g stroke="#DFCBA8" stroke-width="3">
+    <path d="M90 676 h120 M330 682 h140 M500 668 h70"/>
+  </g>
+  <path d="M60 700 C200 660 160 620 320 616 C440 612 480 660 560 640" fill="none" stroke="#33312F" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="0.1 13"/>
+  <rect width="600" height="750" filter="url(#g5grain)"/>
+</svg>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add("js");</script>
+  <title>Sheharnaama | Discover the City Between the Landmarks</title>
+  <meta name="description" content="Discover Sheharnaama, a proposed story-led heritage walking experience through old Pune. Explore neighbourhood architecture, local culture and the stories between the landmarks.">
+  <meta name="theme-color" content="#AD6046">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo_icon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo_icon.svg">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sheharnaama | Discover the City Between the Landmarks">
+  <meta property="og:description" content="A proposed story-led heritage walking experience through old Pune — architecture, everyday culture and the stories between the landmarks.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:image:alt" content="Sheharnaama — The city is more than its landmarks. Curated heritage walks in Pune.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts (with system fallbacks defined in CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ SECTION 1 — STICKY HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Sheharnaama — back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="58 25 204 245" width="38" height="46" focusable="false">
+            <path d="M58 238 V127 Q58 102 78 83 L160 25 L242 83 Q262 102 262 127 V238 H224 V130 Q224 117 213 108 L160 70 L107 108 Q96 117 96 130 V238Z" fill="#AD6046"/>
+            <path d="M116 211 V139 Q116 128 127 120 L160 96 L193 120 Q204 128 204 139 V211" fill="#33312F"/>
+            <path d="M130 199 C143 182 154 177 168 162 C180 149 177 137 166 136 C155 135 149 149 156 159" fill="none" stroke="#F2E6D5" stroke-width="9" stroke-linecap="round"/>
+            <path d="M83 252 Q121 232 160 249 Q199 232 237 252 L237 270 Q200 250 160 267 Q120 250 83 270Z" fill="#33312F"/>
+            <circle cx="162" cy="121" r="5" fill="#F2E6D5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Sheharnaama</span>
+          <span class="brand-tagline">The City Between the Landmarks</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#experience">The Experience</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#passport">Story Passport</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li class="nav-cta-item"><a class="btn btn-primary" href="#register">Join the First Walk</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="#register">Join the First Walk</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ SECTION 2 — HERO ============ -->
+    <section class="hero" id="top" tabindex="-1">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Curated Heritage Walks &middot; Pune</p>
+          <h1 class="hero-title">The city is more than its <em>landmarks.</em></h1>
+          <p class="hero-sub">Find the stories between the landmarks.</p>
+          <p class="hero-body">Step into the lanes, meet the stories and discover the everyday details that give a city its character. Sheharnaama invites you to experience old Pune through its architecture, local culture and the people who bring its neighbourhoods to life.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">Explore the Walk</a>
+            <a class="btn btn-ghost" href="#story">Discover Our Story</a>
+          </div>
+          <ul class="hero-facts" aria-label="Proposed pilot experience details">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <span>90&ndash;120 minutes</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.7-3.2 3-5 5.5-5s4.8 1.8 5.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.4c2 .4 3.6 1.9 4.2 4.6"/></svg>
+              <span>8&ndash;12 guests</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V2.8A1.8 1.8 0 0 1 12 2a1.8 1.8 0 0 1 3 .8V4"/><path d="M9 10h6M9 14h6M9 18h3.5"/></svg>
+              <span>A take-home Story Passport</span>
+            </li>
+          </ul>
+          <p class="hero-note">Proposed pilot features &mdash; to be confirmed before the first walk.</p>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <figure class="arch-frame hero-frame">
+            <img src="assets/img/hero-lane.svg" alt="Illustration of a narrow old Pune lane with terracotta walls, wooden doorways and warm light at its end" width="800" height="1040" fetchpriority="high">
+          </figure>
+          <div class="hero-stamp" aria-hidden="true">
+            <span>Curated &middot; Small group &middot; Story-led</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-route-line" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" focusable="false"><path d="M0 30 C150 5 300 55 450 30 C600 5 750 55 900 30 C1050 5 1120 45 1200 30" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/></svg>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3 — BRAND MANIFESTO ============ -->
+    <section class="manifesto" id="story">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">Look Closer</p>
+          <h2>The magic is <em>in&#8209;between.</em></h2>
+          <p class="section-lede">A doorway worn by generations. A craft carried forward by skilled hands. The flavours of a familiar street. The little details that make a neighbourhood feel like home. These are the stories we believe deserve more than a passing glance.</p>
+        </header>
+
+        <div class="feature-row">
+          <article class="feature" data-reveal>
+            <figure class="arch-frame feature-frame">
+              <img src="assets/img/feat-architecture.svg" alt="Sketch of an old facade with an arched wooden doorway, lattice window and hanging bell" loading="lazy" width="640" height="520">
+            </figure>
+            <p class="feature-no">01</p>
+            <h3>Architecture</h3>
+            <p>Notice the details in old facades, traditional doorways and the character of the streets.</p>
+          </article>
+
+          <article class="feature" data-reveal>
+            <figure class="arch-frame feature-frame">
+              <img src="assets/img/feat-craft.svg" alt="Illustration of a craft workshop corner with brass and clay pots, a weaving frame and hanging threads" loading="lazy" width="640" height="520">
+            </figure>
+            <p class="feature-no">02</p>
+            <h3>People &amp; Craft</h3>
+            <p>Discover the skills, memories and everyday traditions that help shape a neighbourhood. Conversations with local contributors take place only with their consent.</p>
+          </article>
+
+          <article class="feature" data-reveal>
+            <figure class="arch-frame feature-frame">
+              <img src="assets/img/feat-food.svg" alt="Illustration of a market stall with a striped awning, bowls of spice and a steaming kettle" loading="lazy" width="640" height="520">
+            </figure>
+            <p class="feature-no">03</p>
+            <h3>Food &amp; Everyday Life</h3>
+            <p>Explore the flavours, marketplaces and rituals that give local streets their personality. Tastings are optional and depend on confirmed arrangements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4 — FEATURED EXPERIENCE ============ -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <header class="section-head section-head-light" data-reveal>
+          <p class="eyebrow eyebrow-center">Your First Chapter</p>
+          <h2>Meet the <em>Peth Stories Walk.</em></h2>
+          <p class="section-lede">A thoughtfully paced walk through old Pune, guided by stories rather than a checklist. Follow the details of the neighbourhood, discover its layers and collect moments in your own Sheharnaama Story Passport.</p>
+        </header>
+
+        <article class="exp-card" data-reveal>
+          <div class="exp-visual">
+            <img src="assets/img/exp-lane.svg" alt="Illustration of an old wada facade with a carved wooden balcony and an arched gateway in warm light" loading="lazy" width="900" height="640">
+            <span class="exp-badge" aria-hidden="true">Proposed pilot</span>
+          </div>
+          <div class="exp-body">
+            <h3>Peth Stories Walk</h3>
+            <dl class="exp-meta">
+              <div><dt>Location</dt><dd>Old Pune / Peth neighbourhoods</dd></div>
+              <div><dt>Duration</dt><dd>Proposed 90&ndash;120 minutes</dd></div>
+              <div><dt>Group size</dt><dd>Proposed 8&ndash;12 guests</dd></div>
+              <div><dt>Format</dt><dd>Small&#8209;group, story&#8209;led walking experience</dd></div>
+            </dl>
+            <p class="exp-elements-label">Possible elements along the way</p>
+            <ul class="exp-elements">
+              <li>Architectural observations</li>
+              <li>Neighbourhood stories</li>
+              <li>Everyday cultural details</li>
+              <li>Optional craft or food moments, when arrangements are confirmed</li>
+              <li>A Story Passport for collecting memories</li>
+            </ul>
+            <div class="exp-footer">
+              <p class="price-stamp">Indicative pilot price: <strong>&#8377;599 per guest</strong><span>proposed, subject to validation &mdash; not an available ticket</span></p>
+              <a class="btn btn-primary" href="#register">Register Your Interest</a>
+              <p class="exp-disclaimer">Pilot details and availability will be confirmed before a walk is offered.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 5 — THE SAMPLE ROUTE ============ -->
+    <section class="route" id="route">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">The Sample Route</p>
+          <h2>Every stop opens <em>another story.</em></h2>
+          <p class="section-lede">A sample journey through the textures of old Pune. The actual route, meeting point and activities will be confirmed before the pilot begins.</p>
+        </header>
+
+        <figure class="route-map" data-reveal>
+          <img src="assets/img/route-map.svg" alt="A stylised map of winding neighbourhood lanes with five numbered stops connected by a dotted route" loading="lazy" width="1200" height="420">
+          <figcaption>An illustrative route motif, not a navigational map.</figcaption>
+        </figure>
+
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-marker" aria-hidden="true">1</span>
+            <div class="timeline-card">
+              <h3>The Meeting Point</h3>
+              <p>Begin at an agreed public meeting point and receive a short introduction to the neighbourhood.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-marker" aria-hidden="true">2</span>
+            <div class="timeline-card">
+              <h3>The Architectural Details</h3>
+              <p>Look beyond the obvious and notice the doors, facades, lanes and details that reveal a place&rsquo;s character.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-marker" aria-hidden="true">3</span>
+            <div class="timeline-card">
+              <h3>The Everyday Stories</h3>
+              <p>Explore local life and, where appropriate and with permission, learn from the people who contribute to the neighbourhood.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-marker" aria-hidden="true">4</span>
+            <div class="timeline-card">
+              <h3>The Cultural Pause</h3>
+              <p>Make space for a local flavour or craft moment when available and included in the confirmed experience.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-marker" aria-hidden="true">5</span>
+            <div class="timeline-card">
+              <h3>Collect the Story</h3>
+              <p>Close the walk by revisiting your favourite discoveries in the Sheharnaama Story Passport.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6 — HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">How It Works</p>
+          <h2>Walk in. Notice more. <em>Take a story home.</em></h2>
+        </header>
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <p class="step-no">01</p>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="4" y="5" width="16" height="16" rx="2.5"/><path d="M4 10h16M8.5 3v4M15.5 3v4M9.5 15l2 2 3.5-3.5"/></svg></span>
+            <h3>Choose Your Walk</h3>
+            <p>Explore the proposed experience and register your interest.</p>
+          </li>
+          <li class="step" data-reveal>
+            <p class="step-no">02</p>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 21c4.5-4.6 7-8 7-11a7 7 0 1 0-14 0c0 3 2.5 6.4 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <h3>Meet Your Storyteller</h3>
+            <p>Receive confirmed meeting details and practical information before the walk.</p>
+          </li>
+          <li class="step" data-reveal>
+            <p class="step-no">03</p>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="6" cy="5.5" r="2.2"/><circle cx="18" cy="18.5" r="2.2"/><path d="M8 6.5c4 1.5 4 9.5 8 11M6 9.5c2 3 8 3.5 10 7" stroke-dasharray="0.1 3.4"/></svg></span>
+            <h3>Experience the Neighbourhood</h3>
+            <p>Move at a thoughtful pace, notice local details and discover stories along the way.</p>
+          </li>
+          <li class="step" data-reveal>
+            <p class="step-no">04</p>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V2.8A1.8 1.8 0 0 1 12 2a1.8 1.8 0 0 1 3 .8V4"/><path d="M9 10h6M9 13.5h6"/><circle cx="12" cy="17.5" r="2"/></svg></span>
+            <h3>Keep the Memory</h3>
+            <p>Use your Story Passport to collect highlights and revisit the places and stories that mattered to you.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SECTION — UPCOMING WALKS ============ -->
+    <section class="sessions" id="walks">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">Upcoming Walks</p>
+          <h2>Choose Your Next <em>City Story.</em></h2>
+          <p class="section-lede">Proposed dates for the Peth Stories Walk, published by our team as details are verified. Registering interest does not confirm a booking &mdash; final details are always communicated separately.</p>
+        </header>
+
+        <div class="sessions-grid" id="sessions-grid" aria-live="polite">
+          <p class="sessions-loading">Loading upcoming walks&hellip;</p>
+        </div>
+
+        <div class="sessions-actions">
+          <a class="btn btn-ghost" href="#register">Register general interest</a>
+        </div>
+
+        <p class="sessions-note" data-reveal>Group capacity describes the proposed maximum group size &mdash; it is not a count of remaining seats, and no payment is taken at this stage.</p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 7 — STORY PASSPORT ============ -->
+    <section class="passport" id="passport">
+      <div class="container">
+        <div class="passport-grid">
+          <div class="passport-copy" data-reveal>
+            <p class="eyebrow">The Sheharnaama Story Passport</p>
+            <h2>Collect stories, <em>not just places.</em></h2>
+            <p class="section-lede">Your journey deserves more than a photograph. The Story Passport is a journal&#8209;inspired keepsake designed to help you remember the details, discoveries and moments that made your walk personal.</p>
+
+            <div class="passport-actions">
+              <button type="button" class="btn btn-small" id="passport-flip" aria-pressed="false">Look inside</button>
+            </div>
+
+            <div class="passport-features">
+              <div class="passport-feature">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.5V6.8M12 17.2v-1.7" /></svg></span>
+                <h3>Story Stamps</h3>
+                <p>Mark the moments and stops that made an impression.</p>
+              </div>
+              <div class="passport-feature">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20l1.2-4.2L16.6 4.4a2 2 0 0 1 2.8 0l.2.2a2 2 0 0 1 0 2.8L8.2 18.8 4 20Z"/><path d="M14.5 6.5l3 3"/></svg></span>
+                <h3>Memory Notes</h3>
+                <p>Keep a word, a sketch or a detail worth remembering.</p>
+              </div>
+              <div class="passport-feature">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="4" y="4" width="6.5" height="6.5"/><rect x="13.5" y="4" width="6.5" height="6.5"/><rect x="4" y="13.5" width="6.5" height="6.5"/><path d="M13.5 13.5h3v3h-3zM17 17h3v3h-3zM13.5 20.5h1M20.5 13.5v1"/></svg></span>
+                <h3>QR Story Links</h3>
+                <p>Where a real story page is available, a QR code can connect the physical keepsake to further reading or audio.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="passport-mockup" data-reveal>
+            <div class="passport-book" id="passport-book">
+              <!-- Cover -->
+              <div class="passport-face passport-front" aria-hidden="true">
+                <span class="passport-border">
+                  <svg class="passport-mark" viewBox="58 25 204 245" width="64" height="77" focusable="false">
+                    <path d="M58 238 V127 Q58 102 78 83 L160 25 L242 83 Q262 102 262 127 V238 H224 V130 Q224 117 213 108 L160 70 L107 108 Q96 117 96 130 V238Z" fill="#F2E6D5"/>
+                    <path d="M116 211 V139 Q116 128 127 120 L160 96 L193 120 Q204 128 204 139 V211" fill="#8C4B36"/>
+                    <path d="M130 199 C143 182 154 177 168 162 C180 149 177 137 166 136 C155 135 149 149 156 159" fill="none" stroke="#F2E6D5" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M83 252 Q121 232 160 249 Q199 232 237 252 L237 270 Q200 250 160 267 Q120 250 83 270Z" fill="#F2E6D5"/>
+                    <circle cx="162" cy="121" r="5" fill="#F2E6D5"/>
+                  </svg>
+                  <span class="passport-title">Sheharnaama</span>
+                  <span class="passport-sub">Story Passport</span>
+                  <span class="passport-field"><span>Walk</span><span class="passport-line"></span></span>
+                  <span class="passport-field"><span>Date</span><span class="passport-line passport-line-short"></span></span>
+                  <span class="passport-ring passport-ring-a" aria-hidden="true"></span>
+                  <span class="passport-ring passport-ring-b" aria-hidden="true"></span>
+                </span>
+              </div>
+              <!-- Open spread -->
+              <div class="passport-face passport-inside" aria-hidden="true">
+                <div class="passport-page">
+                  <p class="passport-page-label">Notes</p>
+                  <span class="note-line"></span><span class="note-line"></span>
+                  <span class="note-line"></span><span class="note-line short"></span>
+                  <svg class="note-sketch" viewBox="0 0 96 64" width="96" height="64" focusable="false">
+                    <path d="M28 58 V30 A20 20 0 0 1 68 30 V58" fill="none" stroke="#AD6046" stroke-width="3.5" stroke-linecap="round"/>
+                    <path d="M20 58 H76" stroke="#33312F" stroke-width="3.5" stroke-linecap="round"/>
+                    <path d="M36 56 V32 A12 12 0 0 1 60 32 V56" fill="none" stroke="#33312F" stroke-width="2" stroke-dasharray="0.1 5"/>
+                  </svg>
+                  <span class="mini-stamp" aria-hidden="true">Peth<br>Stop 03</span>
+                </div>
+                <div class="passport-page">
+                  <p class="passport-page-label">This walk</p>
+                  <span class="field-line"><span>Walk</span><span class="passport-line"></span></span>
+                  <span class="field-line"><span>Date</span><span class="passport-line"></span></span>
+                  <span class="field-line"><span>With</span><span class="passport-line passport-line-short"></span></span>
+                  <span class="qr-sample">
+                    <img src="assets/img/qr-sample.svg" alt="" width="86" height="86" loading="lazy">
+                    <span>Sample QR placeholder &mdash; a real link will be configured later</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="passport-mockup-note">Concept mockup of the keepsake &mdash; the physical design will evolve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 8 — WHY SHEHARNAAMA ============ -->
+    <section class="why" id="why">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">Why Sheharnaama</p>
+          <h2>Not just where you go. <em>How you experience it.</em></h2>
+        </header>
+
+        <div class="compare" data-reveal>
+          <div class="compare-col compare-sightseeing">
+            <h3>Conventional sightseeing</h3>
+            <ul>
+              <li>Primarily organised around famous places.</li>
+              <li>Often focuses on the destination itself.</li>
+              <li>Can leave everyday neighbourhood details unexplored.</li>
+            </ul>
+          </div>
+          <div class="compare-divider" aria-hidden="true"><span>or</span></div>
+          <div class="compare-col compare-shehar">
+            <h3>The Sheharnaama approach</h3>
+            <ul>
+              <li>Story&#8209;led neighbourhood discovery.</li>
+              <li>Attention to architecture, people and daily life.</li>
+              <li>A smaller proposed group format.</li>
+              <li>A Story Passport that extends the experience beyond the walk.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="compare-close" data-reveal>Because the stories between the landmarks deserve to be discovered, <em>too.</em></p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 9 — WHO IT IS FOR ============ -->
+    <section class="audience" id="audience">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">Who It Is For</p>
+          <h2>For the <em>curious.</em></h2>
+        </header>
+
+        <div class="audience-row">
+          <article class="audience-panel" data-reveal>
+            <figure class="arch-frame audience-frame">
+              <img src="assets/img/audience-rediscoverer.svg" alt="Illustration of a window sill with a cup of chai and potted plants overlooking a quiet street" loading="lazy" width="640" height="480">
+            </figure>
+            <h3>The City Rediscoverer</h3>
+            <p>For Pune residents ready to see familiar streets differently.</p>
+          </article>
+          <article class="audience-panel" data-reveal>
+            <figure class="arch-frame audience-frame">
+              <img src="assets/img/audience-cultureseeker.svg" alt="Illustration of an open travel journal with an arch sketch, a folded map and a film camera" loading="lazy" width="640" height="480">
+            </figure>
+            <h3>The Culture Seeker</h3>
+            <p>For visitors who want to go beyond a conventional sightseeing itinerary.</p>
+          </article>
+          <article class="audience-panel" data-reveal>
+            <figure class="arch-frame audience-frame">
+              <img src="assets/img/audience-shared.svg" alt="Illustration of three friends walking together along a dotted route past old arches" loading="lazy" width="640" height="480">
+            </figure>
+            <h3>The Shared Experience</h3>
+            <p>For friends, college groups and private groups looking for a meaningful way to explore a neighbourhood.</p>
+          </article>
+        </div>
+        <p class="audience-note" data-reveal>Group formats and private outings will be planned on request once the pilot is confirmed.</p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 10 — CAMPAIGN ============ -->
+    <section class="campaign" id="campaign">
+      <div class="container">
+        <header class="section-head section-head-light" data-reveal>
+          <p class="eyebrow eyebrow-center">The Campaign</p>
+          <h2 class="campaign-title">You&rsquo;ve seen the landmark.<br><em>Have you heard the lane?</em></h2>
+          <p class="section-lede">Some of a city&rsquo;s most memorable stories are not displayed on plaques. They live in small details, everyday rituals, familiar shops and the people who give a place its character.</p>
+          <p class="campaign-hashtag" aria-label="Campaign hashtag: What Lies Between">#WhatLiesBetween</p>
+        </header>
+
+        <div class="campaign-row">
+          <article class="campaign-card" data-reveal>
+            <figure><img src="assets/img/campaign-doorway.svg" alt="Illustration of a weathered wooden doorway with light spilling across the threshold" loading="lazy" width="640" height="800"></figure>
+            <div class="campaign-card-body">
+              <p class="campaign-tag">Card A</p>
+              <h3>The Doorway</h3>
+              <p>Every threshold has a story worth noticing.</p>
+            </div>
+          </article>
+          <article class="campaign-card" data-reveal>
+            <figure><img src="assets/img/campaign-craft.svg" alt="Illustration of stacks of glass bangles, thread spools and scissors on a craft table" loading="lazy" width="640" height="800"></figure>
+            <div class="campaign-card-body">
+              <p class="campaign-tag">Card B</p>
+              <h3>The Craft</h3>
+              <p>Tradition survives through the people who practise it.</p>
+            </div>
+          </article>
+          <article class="campaign-card" data-reveal>
+            <figure><img src="assets/img/campaign-lane.svg" alt="Illustration of a narrow lane with hanging lanterns, shopfronts and a bicycle leaning on a wall" loading="lazy" width="640" height="800"></figure>
+            <div class="campaign-card-body">
+              <p class="campaign-tag">Card C</p>
+              <h3>The Lane</h3>
+              <p>Look beyond the destination. Discover what happens in between.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="campaign-cta" data-reveal>
+          <a class="btn btn-light" href="#experience">Explore the Peth Stories Walk</a>
+          <p id="campaign-insta-slot" style="margin:14px 0 0;"></p>
+          <p class="campaign-cta-note">A public campaign page will follow once the pilot is announced.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 11 — GALLERY ============ -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">Gallery</p>
+          <h2>Little details. <em>Lasting impressions.</em></h2>
+          <p class="section-lede">Illustrated impressions of the textures a walk hopes to notice &mdash; doorways, lanes, crafts and the keepsake that ties them together.</p>
+        </header>
+
+        <div class="gallery-grid" data-reveal>
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-caption="A weathered wooden door painted in faded indigo, set in a terracotta frame" aria-label="Enlarge image: weathered indigo door in a terracotta frame">
+              <img src="assets/img/g-doorway.svg" alt="A weathered wooden door painted in faded indigo, set in a terracotta frame" loading="lazy" width="600" height="750">
+            </button>
+            <figcaption>Thresholds in faded indigo</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-caption="Old stone steps climbing between warm walls, strung with garlands" aria-label="Enlarge image: stone steps with hanging garlands">
+              <img src="assets/img/g-lane.svg" alt="Old stone steps climbing between warm walls, strung with flower garlands" loading="lazy" width="600" height="750">
+            </button>
+            <figcaption>Steps that climb slowly</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-caption="A potter's wheel shaping clay among finished vessels" aria-label="Enlarge image: potter's wheel with clay pots">
+              <img src="assets/img/g-craft.svg" alt="A potter's wheel shaping clay among finished vessels on shelves" loading="lazy" width="600" height="750">
+            </button>
+            <figcaption>Hands that shape clay</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-caption="Bowlfuls of spices and grains at a neighbourhood market counter" aria-label="Enlarge image: market counter with bowls of spices">
+              <img src="assets/img/g-market.svg" alt="Bowlfuls of spices and grains at a neighbourhood market counter" loading="lazy" width="600" height="750">
+            </button>
+            <figcaption>Market mornings</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-caption="Brass temple bells hanging along a shaded colonnade" aria-label="Enlarge image: brass bells in a colonnade">
+              <img src="assets/img/g-steps.svg" alt="A row of brass temple bells hanging along a shaded colonnade" loading="lazy" width="600" height="750">
+            </button>
+            <figcaption>Bells along the colonnade</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-caption="A close-up of the Sheharnaama Story Passport with stamp rings and a dotted route" aria-label="Enlarge image: Story Passport cover with stamps">
+              <img src="assets/img/g-passport.svg" alt="A close-up of the Sheharnaama Story Passport cover with stamp rings and a dotted route" loading="lazy" width="600" height="750">
+            </button>
+            <figcaption>The Story Passport keepsake</figcaption>
+          </figure>
+        </div>
+        <p class="gallery-note" data-reveal>Illustrative artwork in the brand&rsquo;s visual language &mdash; not photographs of completed walks.</p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 12 — REGISTRATION ============ -->
+    <section class="register" id="register">
+      <div class="container register-grid">
+        <div class="register-copy" data-reveal>
+          <p class="eyebrow">Be Part of the First Chapter</p>
+          <h2>Your next city story <em>starts here.</em></h2>
+          <p class="section-lede">We are shaping our first Sheharnaama walk. Share your interest to help us understand the preferred dates, group size and experience format.</p>
+          <ul class="register-points">
+            <li>Small groups, designed for 8&ndash;12 guests (proposed).</li>
+            <li>90&ndash;120 minutes through the Peth neighbourhoods (proposed).</li>
+            <li>A Story Passport to take home.</li>
+          </ul>
+          <p class="register-demo-note">This prototype records expressions of interest in a local demonstration database. It is not a booking system: no payment is taken and no tour is confirmed. Submitting requires the site to be served by the Sheharnaama backend.</p>
+        </div>
+
+        <div class="register-card" data-reveal>
+          <form id="interest-form" novalidate>
+            <div class="field">
+              <label for="f-name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required aria-describedby="err-name">
+              <p class="field-error" id="err-name"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-email">Email address <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required aria-describedby="err-email">
+              <p class="field-error" id="err-email"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-date">Preferred date <span class="opt">(optional)</span></label>
+                <input type="date" id="f-date" name="date" aria-describedby="hint-date">
+                <p class="field-hint" id="hint-date">A rough preference is enough &mdash; dates are not final.</p>
+              </div>
+              <div class="field">
+                <label for="f-guests">Number of guests <span class="req" aria-hidden="true">*</span></label>
+                <select id="f-guests" name="guests" required aria-describedby="err-guests">
+                  <option value="" selected>Select&hellip;</option>
+                </select>
+                <p class="field-error" id="err-guests"></p>
+                <noscript><p class="field-hint">This demonstration form needs JavaScript enabled to show guest options and record interest.</p></noscript>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-interest">Experience interest <span class="req" aria-hidden="true">*</span></label>
+              <select id="f-interest" name="interest" required aria-describedby="err-interest">
+                <option value="" selected>Select an experience&hellip;</option>
+                <option value="peth-stories-walk">Peth Stories Walk</option>
+                <option value="private-group">Private / Group Experience</option>
+              </select>
+              <p class="field-error" id="err-interest"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-session">Walk session <span class="opt">(optional)</span></label>
+              <select id="f-session" name="session_id" aria-describedby="session-summary">
+                <option value="" selected>General interest &mdash; no specific date</option>
+              </select>
+              <div class="session-summary" id="session-summary" hidden></div>
+            </div>
+
+            <div class="field">
+              <label for="f-notes">Accessibility or experience notes <span class="opt">(optional)</span></label>
+              <textarea id="f-notes" name="notes" rows="3" placeholder="Anything that would help us plan a comfortable experience."></textarea>
+            </div>
+
+            <!-- Honeypot: hidden from humans, must stay empty -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="f-website">Leave this field empty</label>
+              <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field field-consent">
+              <input type="checkbox" id="f-consent" name="consent" required aria-describedby="err-consent">
+              <label for="f-consent">I understand this is an interest registration for a proposed pilot, not a booking, and I agree that my details may be used to share pilot updates. <span class="req" aria-hidden="true">*</span></label>
+            </div>
+            <p class="field-error" id="err-consent"></p>
+
+            <button type="submit" class="btn btn-primary btn-block" id="form-submit">Register My Interest</button>
+
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+            <p class="form-footnote">Submitting this prototype form does not confirm a booking. Final route, availability, pricing and meeting details will be confirmed before the experience is offered.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 13 — FAQ ============ -->
+    <section class="faq" id="faq">
+      <div class="container container-narrow">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow eyebrow-center">Questions</p>
+          <h2>Good things to <em>know.</em></h2>
+        </header>
+
+        <div class="faq-list" data-reveal>
+          <details class="faq-item">
+            <summary>What is Sheharnaama?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Sheharnaama is a proposed heritage&#8209;walking experience built around the architecture, people and everyday stories of a neighbourhood.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Where will the walk take place?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>The initial concept focuses on old Pune&rsquo;s Peth neighbourhoods. Exact route and meeting&#8209;point details will be confirmed before a walk is offered.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How long is the walk?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>The proposed pilot duration is approximately 90&ndash;120 minutes. The final duration will depend on the confirmed route.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How large is the group?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>The proposed format is 8&ndash;12 guests, designed to support a more personal experience.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is food included?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Any tasting or food&#8209;related experience will be stated explicitly in the confirmed walk details. It should not be assumed to be included.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How can I register?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Complete the interest form on this page. Submitting the current prototype form is not a confirmed booking.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is the route accessible?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Accessibility details will be provided once the route is finalised. Please share any specific access requirements in the registration notes.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What if the walk is rescheduled or cancelled?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Any confirmed booking will include a clearly communicated cancellation and rescheduling policy. Details will be published before bookings open.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 14 — FINAL CTA ============ -->
+    <section class="final-cta" id="final-cta">
+      <div class="final-cta-inner container">
+        <h2>There&rsquo;s more to the city than the places you came to see.</h2>
+        <p>Take the slower road. Notice the details. Find the stories between the landmarks.</p>
+        <div class="final-cta-actions">
+          <a class="btn btn-primary" href="#register">Join the First Walk</a>
+          <a class="btn btn-ghost-light" href="#story">Discover Sheharnaama</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ SECTION 15 — FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="#top" aria-label="Sheharnaama — back to top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="58 25 204 245" width="38" height="46" focusable="false">
+              <path d="M58 238 V127 Q58 102 78 83 L160 25 L242 83 Q262 102 262 127 V238 H224 V130 Q224 117 213 108 L160 70 L107 108 Q96 117 96 130 V238Z" fill="#D89A80"/>
+              <path d="M116 211 V139 Q116 128 127 120 L160 96 L193 120 Q204 128 204 139 V211" fill="#3B3836"/>
+              <path d="M130 199 C143 182 154 177 168 162 C180 149 177 137 166 136 C155 135 149 149 156 159" fill="none" stroke="#F2E6D5" stroke-width="9" stroke-linecap="round"/>
+              <path d="M83 252 Q121 232 160 249 Q199 232 237 252 L237 270 Q200 250 160 267 Q120 250 83 270Z" fill="#F2E6D5"/>
+              <circle cx="162" cy="121" r="5" fill="#F2E6D5"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Sheharnaama</span>
+            <span class="brand-tagline">The City Between the Landmarks</span>
+          </span>
+        </a>
+        <p class="footer-desc">Sheharnaama is a proposed heritage&#8209;walking experience in Pune &mdash; curated, story&#8209;led walks that pay attention to the architecture, people and everyday life between the landmarks.</p>
+        <p class="footer-hashtag">#WhatLiesBetween</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#experience">The Experience</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#route">Sample Route</a></li>
+          <li><a href="#passport">Story Passport</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#register">Register Interest</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <div id="footer-contact-details" aria-live="polite"></div>
+        <p class="footer-contact-placeholder">Contact details are not configured yet. They will be added here once the pilot launch is announced &mdash; see <code>assets/js/site.config.js</code>.</p>
+        <h3 class="footer-sub">Privacy</h3>
+        <p>This prototype stores interest&#8209;form submissions only in your own browser for demonstration. Nothing is sent to a server, and no personal data is collected by this page.</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Sheharnaama. A brand concept and pilot proposal.</p>
+      <p class="footer-sig">Found between the landmarks.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="to-top" id="to-top" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+  </button>
+
+  <!-- Gallery lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Enlarged gallery image">
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close enlarged image">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </dialog>
+
+  <!-- Walk-session details modal -->
+  <dialog class="session-modal" id="session-modal" aria-labelledby="session-modal-title">
+    <button type="button" class="lightbox-close" id="session-modal-close" aria-label="Close session details">&times;</button>
+    <div id="session-modal-body"></div>
+    <div class="session-modal-actions">
+      <button type="button" class="btn btn-primary btn-small" id="session-modal-register">Register Interest</button>
+      <button type="button" class="btn btn-ghost btn-small" id="session-modal-dismiss">Close</button>
+    </div>
+  </dialog>
+
+  <!-- Site configuration (edit before launch) -->
+  <script src="assets/js/site.config.js"></script>
+  <script src="assets/js/sessions.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

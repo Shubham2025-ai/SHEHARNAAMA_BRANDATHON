@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="Detailed sketch of an old facade with an arched wooden doorway, lattice window and hanging bell">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6EAD6"/>
+      <stop offset="1" stop-color="#EFE0C6"/>
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="640" height="520" fill="url(#bg)"/>
+
+  <!-- facade block -->
+  <rect x="90" y="60" width="460" height="400" fill="#BE7556"/>
+  <rect x="90" y="60" width="460" height="400" fill="none" stroke="#8C4B36" stroke-width="3"/>
+  <path d="M90 92 H550 M90 428 H550" stroke="#8C4B36" stroke-width="2" opacity="0.5"/>
+  <g stroke="#8C4B36" stroke-width="2" opacity="0.35">
+    <path d="M120 60 V92 M170 60 V92 M220 60 V92 M270 60 V92 M320 60 V92 M370 60 V92 M420 60 V92 M470 60 V92 M520 60 V92"/>
+    <path d="M110 400 V428 M160 400 V428 M210 400 V428 M260 400 V428 M310 400 V428 M360 400 V428 M410 400 V428 M460 400 V428 M510 400 V428"/>
+  </g>
+
+  <!-- arched doorway -->
+  <path d="M252 428 V272 A68 68 0 0 1 388 272 V428 Z" fill="#5E3E2F"/>
+  <path d="M266 428 V278 A54 54 0 0 1 374 278 V428 Z" fill="#6E4A38"/>
+  <path d="M320 278 V428 M286 250 A54 54 0 0 0 320 278 A54 54 0 0 0 354 250" fill="none" stroke="#4A2F23" stroke-width="3.5"/>
+  <circle cx="356" cy="356" r="7" fill="#C89B62"/>
+  <path d="M240 428 H400 M228 446 H412" stroke="#8C4B36" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- lattice window -->
+  <circle cx="452" cy="180" r="52" fill="#667B82" stroke="#4F6169" stroke-width="4"/>
+  <g stroke="#F2E6D5" stroke-width="3" opacity="0.9">
+    <path d="M400 180 H504 M452 128 V232 M416 144 L488 216 M488 144 L416 216"/>
+  </g>
+  <path d="M424 428 V330 A28 28 0 0 1 480 330 V428" fill="#667B82" stroke="#4F6169" stroke-width="4"/>
+  <path d="M438 428 V334 M466 334 V428" stroke="#F2E6D5" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- hanging bell -->
+  <path d="M188 92 V132" stroke="#33312F" stroke-width="3"/>
+  <path d="M172 132 h32 l8 26 q-24 12 -48 0 Z" fill="#C89B62" stroke="#9A7238" stroke-width="3"/>
+  <circle cx="188" cy="166" r="5" fill="#9A7238"/>
+
+  <!-- journal annotations -->
+  <ellipse cx="452" cy="180" rx="74" ry="66" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <path d="M526 180 q34 0 34 30 v36" fill="none" stroke="#33312F" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <circle cx="560" cy="252" r="5" fill="#AD6046"/>
+  <ellipse cx="320" cy="240" rx="98" ry="86" fill="none" stroke="#667B82" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <path d="M222 240 q-38 0 -38 -28 v-24" fill="none" stroke="#667B82" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <circle cx="184" cy="182" r="5" fill="#667B82"/>
+  <path d="M96 300 h26 M96 310 h18" stroke="#77716A" stroke-width="2.5" stroke-linecap="round"/>
+
+  <rect width="640" height="520" filter="url(#grain)"/>
+</svg>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>overflow-harness</title></head>
+<body>
+<pre id="results">pending</pre>
+<iframe id="site" src="/index.html"></iframe>
+<script>
+(function () {
+  var widths = [360, 390, 768, 1024, 1280, 1920];
+  var out = [];
+  var frame = document.getElementById("site");
+  var i = 0;
+
+  function checkNext() {
+    if (i >= widths.length) {
+      document.getElementById("results").textContent = out.join("\n");
+      document.title = "done";
+      return;
+    }
+    var w = widths[i];
+    frame.style.width = w + "px";
+    frame.style.height = "2400px";
+    frame.contentWindow.onresize = null;
+    setTimeout(function () {
+      var d = frame.contentDocument.documentElement;
+      var b = frame.contentDocument.body;
+      var sw = Math.max(d.scrollWidth, b.scrollWidth);
+      var cw = frame.contentWindow.innerWidth;
+      var overflow = sw - cw;
+      out.push(w + "px: scrollWidth=" + sw + " clientWidth=" + cw + " -> " + (overflow > 1 ? "OVERFLOW +" + overflow : "OK"));
+      i++;
+      checkNext();
+    }, 350);
+  }
+
+  frame.addEventListener("load", function () { setTimeout(checkNext, 400); });
+})();
+</script>
+</body>
+</html>

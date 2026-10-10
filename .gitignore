@@ -1,0 +1,20 @@
+# Secrets & environment
+.env
+
+# SQLite database (registrations are personal data)
+data/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.pytest_cache/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store

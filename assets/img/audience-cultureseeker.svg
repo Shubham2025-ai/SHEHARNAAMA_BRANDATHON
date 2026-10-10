@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="An open travel journal with an arch sketch, a folded map and a film camera">
+  <defs>
+    <linearGradient id="a2bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6EAD6"/>
+      <stop offset="1" stop-color="#EFE0C6"/>
+    </linearGradient>
+    <filter id="a2grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="640" height="480" fill="url(#a2bg)"/>
+
+  <!-- table -->
+  <rect x="0" y="360" width="640" height="120" fill="#C89B62"/>
+  <rect x="0" y="360" width="640" height="14" fill="#8A5A32"/>
+
+  <!-- open journal -->
+  <g>
+    <path d="M150 150 q90 -30 170 0 v210 q-80 -26 -170 0 Z" fill="#F9F6F0" stroke="#77716A" stroke-width="3"/>
+    <path d="M320 150 q80 -30 170 0 v210 q-90 -26 -170 0 Z" fill="#F4EFE6" stroke="#77716A" stroke-width="3"/>
+    <path d="M320 150 v210" stroke="#77716A" stroke-width="3.5"/>
+    <!-- left page: arch sketch -->
+    <path d="M200 300 v-80 a40 40 0 0 1 80 0 v80" fill="none" stroke="#AD6046" stroke-width="4" stroke-linecap="round"/>
+    <path d="M192 300 h96 M210 300 v-70 a30 30 0 0 1 60 0 v70" fill="none" stroke="#AD6046" stroke-width="2.5"/>
+    <path d="M190 330 h80 M190 344 h60" stroke="#77716A" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="240" cy="250" rx="66" ry="80" fill="none" stroke="#667B82" stroke-width="2" stroke-dasharray="2 8"/>
+    <!-- right page: notes + stamp -->
+    <path d="M356 200 h100 M356 220 h84 M356 240 h96 M356 260 h72" stroke="#77716A" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="432" cy="312" r="30" fill="none" stroke="#AD6046" stroke-width="3" stroke-dasharray="4 6"/>
+    <circle cx="432" cy="312" r="18" fill="none" stroke="#667B82" stroke-width="2.5"/>
+    <path d="M432 300 v-8 a8 8 0 0 1 16 0 v8 M428 300 h16" stroke="#AD6046" stroke-width="2.5" fill="none"/>
+  </g>
+
+  <!-- folded map -->
+  <g transform="rotate(-6 480 420)">
+    <path d="M400 380 l70 -24 l70 24 l-70 26 Z" fill="#E8D3B4" stroke="#B99C74" stroke-width="3"/>
+    <path d="M470 356 v50" stroke="#B99C74" stroke-width="2.5"/>
+    <path d="M420 376 q30 -14 60 -6 q34 8 60 -4" fill="none" stroke="#AD6046" stroke-width="3" stroke-dasharray="1 8" stroke-linecap="round"/>
+    <circle cx="586" cy="368" r="5" fill="#667B82"/>
+    <circle cx="424" cy="374" r="5" fill="#33312F"/>
+  </g>
+
+  <!-- film camera -->
+  <g transform="translate(0 0)">
+    <rect x="66" y="392" width="86" height="52" rx="8" fill="#33312F"/>
+    <rect x="86" y="380" width="30" height="16" rx="4" fill="#33312F"/>
+    <circle cx="109" cy="418" r="16" fill="#667B82" stroke="#4F6169" stroke-width="3"/>
+    <circle cx="109" cy="418" r="7" fill="#F2E6D5"/>
+    <circle cx="140" cy="402" r="5" fill="#AD6046"/>
+  </g>
+
+  <rect width="640" height="480" filter="url(#a2grain)"/>
+</svg>

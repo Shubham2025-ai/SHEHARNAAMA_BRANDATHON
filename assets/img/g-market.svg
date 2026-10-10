@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Bowlfuls of spices and grains at a market counter seen from above the rim">
+  <defs>
+    <linearGradient id="g4bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E3C8"/>
+      <stop offset="1" stop-color="#ECDBBD"/>
+    </linearGradient>
+    <filter id="g4grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.19  0 0 0 0 0.18  0 0 0 0.05 0"/></filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#g4bg)"/>
+  <!-- stall backdrop -->
+  <rect x="60" y="60" width="480" height="220" fill="#B06A4E" stroke="#8C4B36" stroke-width="3"/>
+  <path d="M60 60 h480 l-16 -30 h-448 Z" fill="#667B82"/>
+  <g fill="#F2E6D5">
+    <rect x="96" y="30" width="24" height="32"/><rect x="168" y="30" width="24" height="32"/>
+    <rect x="240" y="30" width="24" height="32"/><rect x="312" y="30" width="24" height="32"/>
+    <rect x="384" y="30" width="24" height="32"/><rect x="456" y="30" width="24" height="32"/>
+  </g>
+  <g stroke="#8A5A32" stroke-width="3" fill="#C89B62">
+    <ellipse cx="150" cy="180" rx="34" ry="42"/>
+    <ellipse cx="240" cy="190" rx="30" ry="38" fill="#AD6046"/>
+    <ellipse cx="330" cy="182" rx="34" ry="42" fill="#667B82"/>
+    <ellipse cx="420" cy="192" rx="28" ry="36" fill="#E3C36A"/>
+  </g>
+  <!-- counter -->
+  <rect x="40" y="280" width="520" height="26" fill="#8A5A32" stroke="#5E3E2F" stroke-width="3"/>
+  <!-- spice bowls -->
+  <g stroke-width="4">
+    <ellipse cx="170" cy="400" rx="78" ry="46" fill="#F2E6D5" stroke="#B99C74"/>
+    <ellipse cx="170" cy="392" rx="62" ry="34" fill="#E3B25C"/>
+    <ellipse cx="400" cy="392" rx="82" ry="48" fill="#F2E6D5" stroke="#B99C74"/>
+    <ellipse cx="400" cy="384" rx="66" ry="36" fill="#B4482F"/>
+    <ellipse cx="286" cy="548" rx="86" ry="50" fill="#F2E6D5" stroke="#B99C74"/>
+    <ellipse cx="286" cy="540" rx="70" ry="38" fill="#C98A4B"/>
+  </g>
+  <!-- scoops -->
+  <g stroke="#33312F" stroke-width="4" stroke-linecap="round">
+    <path d="M452 350 l40 -26 M452 356 q14 2 18 -4"/>
+    <path d="M120 500 l-38 -30"/>
+  </g>
+  <g fill="#33312F">
+    <path d="M492 318 l16 10 l-14 12 Z"/>
+    <path d="M76 464 l-18 -8 l12 -14 Z"/>
+  </g>
+  <!-- scattered grains -->
+  <g fill="#E3B25C">
+    <circle cx="250" cy="460" r="4"/><circle cx="270" cy="472" r="4"/><circle cx="240" cy="478" r="4"/>
+    <circle cx="480" cy="470" r="4"/><circle cx="462" cy="484" r="4"/><circle cx="120" cy="560" r="4"/>
+  </g>
+  <rect width="600" height="750" filter="url(#g4grain)"/>
+</svg>
