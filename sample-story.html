@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sheharnaama | 30-Minute Sample Story Demo: Kasba to Tambat Ali</title>
+  <meta name="description" content="A curated 30-minute audio-visual walking story demo through old Pune's living lanes — combining architecture, living crafts, food aromas, and everyday neighbourhood life.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sheharnaama | 30-Minute Sample Story Demo">
+  <meta property="og:description" content="Experience the city between the landmarks: Kasba to Tambat Ali. An immersive 30-minute walking story.">
+  <meta property="og:image" content="assets/img/og-image.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/story.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo_icon.svg">
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="story-topbar">
+    <div class="container story-topbar-inner">
+      <a href="index.html" class="story-back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Back to Sheharnaama Home</span>
+      </a>
+      <span class="story-badge">Sample Story Walk Demo · 30 Min</span>
+      <a href="index.html#register" class="btn btn-primary btn-small">Register for Full Pilot</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="story-hero">
+    <div class="container">
+      <div class="story-hero-grid">
+        <div>
+          <p class="eyebrow">Stop 03 &middot; Kasba to Tambat Ali &middot; Audio Field Guide</p>
+          <h1 class="hero-title">The Brass Hammers of <em>Tambat Ali</em></h1>
+          <p class="hero-sub">Between the landmarks: A 30-minute journey into living craft, aroma and wada doorways.</p>
+          <p class="hero-body">
+            Old city quarters like Pune’s Peths, Delhi’s Shahjahanabad, and Ahmedabad’s Pols hold layers of history that guidebooks reduce to battle dates and monuments. Sheharnaama invites you to experience what lies between: the rhythm of beating copper, the scent of stone-ground coriander, and the quiet dignity of teakwood thresholds.
+          </p>
+          <div class="story-meta-pills">
+            <span class="story-meta-pill">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              30:00 Audio Story
+            </span>
+            <span class="story-meta-pill">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              450 Metres (Paced Walk)
+            </span>
+            <span class="story-meta-pill">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h10M7 12h10M7 17h6"/></svg>
+              Passport Stop #03
+            </span>
+          </div>
+        </div>
+
+        <!-- Audio Player Card -->
+        <div>
+          <aside class="audio-player-card" aria-label="30-Minute Sample Audio Player">
+            <div class="player-status-row">
+              <span class="player-live-label">
+                <span class="pulsing-dot" aria-hidden="true"></span>
+                Audio Walk Companion
+              </span>
+              <button type="button" class="btn btn-ghost btn-small" id="btn-speed" title="Toggle playback speed">1.0x</button>
+            </div>
+
+            <div class="player-controls">
+              <button type="button" class="btn-play" id="btn-play-pause" aria-label="Play or pause audio story">
+                <!-- Play SVG -->
+                <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <!-- Pause SVG -->
+                <svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="player-track-info">
+                <p class="track-title" id="active-chapter-title">The Wooden Threshold (Architecture)</p>
+                <p class="track-sub">Chapter audio with ambient soundscape &amp; chime</p>
+              </div>
+            </div>
+
+            <div class="player-scrubber-wrap">
+              <input type="range" class="player-scrubber" id="audio-scrubber" min="0" max="1800" value="0" step="1" aria-label="Audio timeline slider">
+              <div class="player-time-row">
+                <span id="time-current">00:00</span>
+                <span>30:00</span>
+              </div>
+            </div>
+
+            <!-- Chapter Jump Buttons -->
+            <div class="chapter-nav-pills" role="navigation" aria-label="Audio Chapter Quick-jump">
+              <button type="button" class="chapter-jump-btn active" data-chapter="ch1">00:00 Threshold</button>
+              <button type="button" class="chapter-jump-btn" data-chapter="ch2">08:15 Coppersmiths</button>
+              <button type="button" class="chapter-jump-btn" data-chapter="ch3">16:30 Spice Depot</button>
+              <button type="button" class="chapter-jump-btn" data-chapter="ch4">24:10 Living Otla</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Story Body & Interactive Sidebar -->
+  <main class="story-body-section">
+    <div class="container story-layout-grid">
+
+      <!-- Left Column: Story Chapters -->
+      <div>
+
+        <!-- Chapter 1 -->
+        <article class="chapter-card highlighted" id="ch1">
+          <span class="chapter-timestamp-badge">00:00 &ndash; 08:15 &middot; Chapter 1</span>
+          <span class="chapter-tag tag-arch">Architecture &middot; Wada Details</span>
+          <h2 class="chapter-title">The Wooden Threshold (Umbra)</h2>
+          <blockquote class="chapter-quote">
+            &ldquo;Look down at the floor before you look up at the arches. The threshold you just crossed was hewn from teakwood in 1884 &mdash; rubbed smooth by five generations of bare feet.&rdquo;
+          </blockquote>
+          <p class="chapter-body">
+            You step off the busy thoroughfare into the quiet vestibule of a traditional wada in Kasba Peth. Typical tours point up toward stone bastions and military dates, but Sheharnaama invites you to pause at the <em>umbra</em> &mdash; the raised wooden sill at every threshold. In old Marathi homes, crossing the threshold was a deliberate ritual: stepping over it marked the transition from the dust and commerce of the bazaar into the sanctity and coolness of the private courtyard.
+          </p>
+          <p class="chapter-body">
+            Look up into the inner <em>chowk</em> (central courtyard). Notice how the heavy teak pillars support double-cantilevered balconies without a single steel bolt. The air temperature here drops three degrees as the courtyard acts as a natural chimney, pulling cool air up through shaded wooden lattices.
+          </p>
+          <div class="sensory-callout">
+            <span class="sensory-icon" aria-hidden="true">🏛️</span>
+            <div>
+              <strong>What to notice on your walk:</strong> Run your fingertips along the peacock carvings at the bracket joints. The wood is unvarnished CP teak, aged to a warm charcoal-brown that resists termites without chemicals.
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article class="chapter-card" id="ch2">
+          <span class="chapter-timestamp-badge">08:15 &ndash; 16:30 &middot; Chapter 2</span>
+          <span class="chapter-tag tag-craft">Living Craft &middot; People</span>
+          <h2 class="chapter-title">The Rhythm of Beaten Copper (Tambat Ali)</h2>
+          <blockquote class="chapter-quote">
+            &ldquo;Tink... tink... tink. You hear the lane a full two minutes before you see it. This is mathar kam &mdash; the sound of copper being taught how to hold water.&rdquo;
+          </blockquote>
+          <p class="chapter-body">
+            Turn into the lane where the cobblestones narrow. The noise of traffic fades, replaced by a rhythmic metallic percussion. You are in <strong>Tambat Ali</strong>, home to Pune’s coppersmith community since the 17th century. These are not souvenir stall vendors; they are hereditary master metalsmiths.
+          </p>
+          <p class="chapter-body">
+            We stop beside Bapu Rao Tambat, 72, seated cross-legged on a wooden stool beside his iron anvil. He is shaping a traditional copper <em>tambya</em> (water vessel). With rapid, perfectly measured strokes of a curved hammer, he creates thousands of tiny dimples across the copper sheet. This isn't decorative ornament &mdash; the dimpling (<em>mathar kam</em>) hardens the malleable metal and increases its surface area, naturally keeping water chilled and sweet.
+          </p>
+          <div class="sensory-callout">
+            <span class="sensory-icon" aria-hidden="true">🔨</span>
+            <div>
+              <strong>The Maker’s Story:</strong> Bapu Rao explains why factory-pressed vessels can never match hand-beaten copper: &ldquo;A stamped machine pot is dead metal. A beaten pot remembers every blow. It survives four generations of weddings and kitchens.&rdquo;
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article class="chapter-card" id="ch3">
+          <span class="chapter-timestamp-badge">16:30 &ndash; 24:10 &middot; Chapter 3</span>
+          <span class="chapter-tag tag-food">Aroma &middot; Food Heritage</span>
+          <h2 class="chapter-title">The Brass Samovar &amp; The Stone Spice Depot</h2>
+          <blockquote class="chapter-quote">
+            &ldquo;Follow the aroma of roasted coriander seeds and stone-ground dagad phool. Heritage isn’t only what you see &mdash; it’s what you taste at nine in the morning.&rdquo;
+          </blockquote>
+          <p class="chapter-body">
+            Two bends down a quiet alleyway, the metallic chimes give way to an intoxicating blend of toasted coriander, dry red chillies, and woodsmoke. We halt outside a 90-year-old spice depot with wooden drawers stacked high. Here, grandmother recipes for <em>Goda Masala</em> are ground on slow iron rollers that never heat the spices, preserving their volatile essential oils.
+          </p>
+          <p class="chapter-body">
+            Next door is the corner Irani bakery stall. The brass tea samovar hums quietly, boiling strong Assam dust tea with crushed lemongrass and green cardamom. You are handed a warm glass of chai alongside oven-fresh Brun Pav &mdash; crisp on the exterior, steaming soft within, slathered with unpasteurized white butter.
+          </p>
+          <div class="sensory-callout">
+            <span class="sensory-icon" aria-hidden="true">☕</span>
+            <div>
+              <strong>The Food Pitstop:</strong> Unlike generic tourist tours that rush past food stalls, Sheharnaama treats local culinary rituals as living architecture. Taste the subtle smokiness of the brass samovar infusion.
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 4 -->
+        <article class="chapter-card" id="ch4">
+          <span class="chapter-timestamp-badge">24:10 &ndash; 30:00 &middot; Chapter 4</span>
+          <span class="chapter-tag tag-people">Everyday Life &middot; Living Memory</span>
+          <h2 class="chapter-title">What the Walls Remember (The Living Otla)</h2>
+          <blockquote class="chapter-quote">
+            &ldquo;A city lives in its in-between spaces &mdash; the doorstep gossip, the chalk rangoli drawn before dawn, and the memories shared over a folded morning paper.&rdquo;
+          </blockquote>
+          <p class="chapter-body">
+            As the 30-minute sample journey concludes, we pause on the stone <em>otla</em> &mdash; the raised platform fronting old lane homes. Elders from three neighbouring families sit here reading the local morning newspaper in the mild morning sun. They wave to the postman, exchange news of whose grandson is returning from abroad, and debate the best season for mangoes.
+          </p>
+          <p class="chapter-body">
+            This is what Sheharnaama is built for: not viewing an old city as an open-air museum frozen in stone, but understanding it as a living, breathing neighbourhood where memory, architecture, craft, and human kindness intertwine every single morning.
+          </p>
+          <div class="sensory-callout">
+            <span class="sensory-icon" aria-hidden="true">📖</span>
+            <div>
+              <strong>Closing Reflection:</strong> Pull out your physical Story Passport. It’s time to record what you noticed, collect the handcrafted seal, and preserve this morning’s discoveries.
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Right Column: Sidebar Companion -->
+      <aside class="story-sidebar">
+
+        <!-- Passport Stamp Box -->
+        <div class="passport-companion-box" id="passport-tool">
+          <div class="companion-head">
+            <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--terracotta)" fill="none" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h10M7 12h10M7 17h6"/></svg>
+            <h3>Story Passport Companion</h3>
+          </div>
+          <p style="font-size:0.86rem; color:var(--ink-soft); margin-bottom:12px;">
+            In the physical walk, each guest collects inked stamps and field notes. Test the digital keepsake below:
+          </p>
+
+          <div class="stamp-canvas-area">
+            <div class="stamp-seal" id="stamp-seal">
+              <span>Tambat Ali<br>Hand-Beaten<br>Copper &middot; Stop 03</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-stamp-action" id="btn-collect-stamp">Collect Digital Stamp</button>
+
+          <!-- User Notes -->
+          <div class="memory-note-box">
+            <label for="user-memory-note" style="font-size:0.78rem; font-weight:700; color:var(--ink); display:block; margin-bottom:4px;">
+              Your Memory Note (Saved to your device):
+            </label>
+            <textarea id="user-memory-note" placeholder="Write what caught your eye — a doorway, an aroma, or Bapu Rao's words..."></textarea>
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <button type="button" class="btn btn-small btn-ghost" id="btn-save-note">Save Field Note</button>
+              <span id="note-save-status" style="font-size:0.75rem; color:var(--success); font-weight:600; display:none;"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scannable QR Code Card -->
+        <div class="story-qr-card">
+          <p style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--terracotta-dark); margin:0 0 8px;">
+            Scannable QR Story Link
+          </p>
+          <img src="assets/img/qr-sample.svg" alt="Scan QR code to open 30-min sample story on your phone" class="story-qr-img">
+          <p style="font-size:0.82rem; color:var(--ink-soft); margin:0 0 10px;">
+            Scan with your phone camera to open this 30-min sample walk story directly on your mobile device.
+          </p>
+          <span style="font-size:0.72rem; color:var(--soft-text); font-family:monospace; word-break:break-all;">
+            sheharnaama.github.io/sample-story
+          </span>
+        </div>
+
+        <!-- Brand Positioning Pitch Card -->
+        <div class="pitch-card">
+          <p style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--terracotta-dark); margin:0 0 6px;">
+            Brandathon Positioning
+          </p>
+          <h4 style="margin:0 0 8px; font-size:0.96rem;">Why Sheharnaama Stands Apart</h4>
+          <table class="pitch-table">
+            <thead>
+              <tr>
+                <th>Standard Walks</th>
+                <th>Sheharnaama</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monuments &amp; battle dates</td>
+                <td><strong>Everyday life &amp; crafts</strong></td>
+              </tr>
+              <tr>
+                <td>Crowded 40-person groups</td>
+                <td><strong>Intimate 8&ndash;12 guests</strong></td>
+              </tr>
+              <tr>
+                <td>Rushed photo-stops</td>
+                <td><strong>Food &amp; maker dialogues</strong></td>
+              </tr>
+              <tr>
+                <td>Forgotten souvenirs</td>
+                <td><strong>Story Passport keepsake</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top:14px; text-align:center;">
+            <a href="index.html#register" class="btn btn-primary btn-small" style="width:100%;">Join The First Walk</a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="margin-top:0;">
+    <div class="container footer-grid">
+      <div>
+        <p style="font-family:var(--font-display); font-size:1.4rem; color:var(--warm-white); margin-bottom:4px;">Sheharnaama</p>
+        <p style="font-size:0.9rem; color:rgba(249, 246, 240, 0.75);">The City Between the Landmarks &middot; #WhatLiesBetween</p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem; color:rgba(249, 246, 240, 0.65);">
+          &copy; 2026 Sheharnaama. Brand concept &amp; curated walking experience package demo for Pune’s Peths.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive script -->
+  <script src="assets/js/story.js"></script>
+</body>
+</html>

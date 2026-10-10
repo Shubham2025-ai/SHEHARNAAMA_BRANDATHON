@@ -100,6 +100,12 @@ def admin_page() -> FileResponse:
     return FileResponse(PROJECT_ROOT / "admin.html", media_type="text/html")
 
 
+@app.get("/sample-story", include_in_schema=False)
+@app.get("/sample-story.html", include_in_schema=False)
+def sample_story_page() -> FileResponse:
+    return FileResponse(PROJECT_ROOT / "sample-story.html", media_type="text/html")
+
+
 app.mount(
     "/assets",
     StaticFiles(directory=str(PROJECT_ROOT / "assets")),
