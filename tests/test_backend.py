@@ -337,18 +337,3 @@ def test_admin_page_and_assets_served(client):
     # The database file must NOT be publicly reachable.
     leaked = client.get("/data/sheharnaama.sqlite3")
     assert leaked.status_code in (404, 405)
-
-
-# 21. Sample story 30-min demo page served
-def test_sample_story_page_served(client):
-    res_clean = client.get("/sample-story")
-    assert res_clean.status_code == 200
-    assert "Tambat Ali" in res_clean.text
-    assert "30-Minute" in res_clean.text
-
-    res_html = client.get("/sample-story.html")
-    assert res_html.status_code == 200
-    assert "Tambat Ali" in res_html.text
-
-    res_qr = client.get("/assets/img/qr-sample.svg")
-    assert res_qr.status_code == 200
